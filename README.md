@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal CV Website
 
-## Getting Started
+## Описание проекта (к чему стремимся):
 
-First, run the development server:
+Этот проект представляет собой интерактивное веб-приложение, созданное с использованием React и Next.js, предназначенное для демонстрации моего профессионального резюме. Веб-сайт включает детальную информацию обо мне, моем опыте работы, портфолио проектов, а также контактной информации. Приложение поддерживает мультиязычность (русский и английский) и предоставляет возможность переключения между светлой и тёмной темами.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Функциональные требования:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Информация о работе**:
+   - Вывод списка компаний, должностей, периодов работы.
+   - Показ достижений, должностных обязанностей и описания проектов.
+   - Детализация использованных технологий.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Раздел "Обо мне"**:
+   - Представление личной информации и профессиональных интересов.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Портфолио**:
+   - Показ проектов с возможностью детального просмотра каждого из них.
 
-## Learn More
+4. **Контактная информация**:
+   - Ссылки на социальные сети и профессиональные платформы.
+   - Номера телефонов с указанием страны.
+   - Адрес электронной почты.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Уровни знания языков**:
+   - Вывод информации о владении языками с указанием уровня владения.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. **Переключение тем**:
+   - Возможность выбора между светлой и тёмной темами интерфейса.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+7. **Мультиязычность**:
+   - Поддержка русского и английского языков.
 
-## Deploy on Vercel
+8. **Отображение персональных данных**:
+   - ФИО, желаемая позиция, краткое описание.
+   - Автоматический расчёт стажа работы.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+9. **Экспорт CV в PDF**:
+   - Возможность сохранения резюме в PDF-формате.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Нефункциональные требования
+
+1. **Производительность**:
+   - Высокая скорость загрузки и отзывчивость приложения.
+
+2. **Удобство использования**:
+   - Интуитивно понятный интерфейс, доступный для пользователей всех уровней.
+
+3. **Адаптивность**:
+   - Корректное отображение на различных устройствах и разрешениях экрана.
+
+4. **Безопасность**:
+   - Защита личных данных и безопасность веб-платформы.
+
+5. **Совместимость**:
+   - Поддержка всех современных браузеров.
+
+6. **Масштабируемость**:
+   - Лёгкое добавление контента и функциональности.
+
+## Технологии
+
+- React.js
+- Next.js
+- CSS-in-JS (styled-components или emotion)
+- i18next (для интернационализации)
+- Node.js (для серверных функций, если необходимо)
