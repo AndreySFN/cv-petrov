@@ -99,6 +99,8 @@ body {
   display: flex;
   justify-content: center;
   background-color: #FCFAFA;
+  background-image: url(/background.svg);
+  background-repeat: repeat;
 }
 
 *, *::before, *::after {

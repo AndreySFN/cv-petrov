@@ -36,6 +36,8 @@
     // @media (max-width: $EXTRA_LARGE) {
     //   width: 235px;
     // }
+    background-image: url(/left-panel-background.svg);
+    background-size: cover;
   }
 
   .avatar-container {
@@ -56,6 +58,7 @@
 
   .c {
     grid-area: c;
+    background-color: white;
     border-right: 8px solid $LIGHT_BLUE;
     @media(max-width: $LARGE) {
       border-right: none;
