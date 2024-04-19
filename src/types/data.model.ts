@@ -22,7 +22,8 @@ export interface Phone {
 export interface Contact {
     icon?: string;
     name?: string;
-    link: string;
+    text: string
+    link?: string;
 }
 
 export enum LanguageLevels {
