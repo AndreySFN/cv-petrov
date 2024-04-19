@@ -5,7 +5,7 @@
   padding-top: 10px;
   display: grid;
   width: 100%;
-  max-width: 1180px;
+  max-width: 90%;
   min-height: 100%;
   grid-template-rows: 275px 1fr;
   grid-template-columns: 300px 1fr;
@@ -14,6 +14,7 @@
     "b c";
 
   @media (max-width: $EXTRA_LARGE) {
+    max-width: 100%;
     padding-top: 0;
     grid-template-columns: 215px 1fr;
     grid-template-rows: 215px 1fr;
