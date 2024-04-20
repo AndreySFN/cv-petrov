@@ -87,7 +87,7 @@
 
 ## Project Description (Goals):
 
-This project is an interactive web application built using React and Next.js, designed to showcase my professional resume. The website includes detailed information about me, my work experience, project portfolio, and contact information. The application supports multilingual capabilities (Russian and English) and offers the ability to switch between light and dark themes.
+This project is an interactive web application built using React and Next.js, designed to showcase my professional resume. The website includes detailed information about me, my work experience, project portfolio, and contact information. The application supports multilingualism (Russian and English) and offers the ability to switch between light and dark themes.
 
 ## Functional Requirements:
 
@@ -100,7 +100,7 @@ This project is an interactive web application built using React and Next.js, de
    - Presentation of personal information and professional interests.
 
 3. **Portfolio**:
-   - Display projects with the ability to view each in detail.
+   - Display projects with the option for detailed viewing of each.
 
 4. **Contact Information**:
    - Links to social networks and professional platforms.
@@ -108,12 +108,12 @@ This project is an interactive web application built using React and Next.js, de
    - Email address.
 
 5. **Language Proficiency Levels**:
-   - Display information about language skills with proficiency levels.
+   - Display information about language proficiency with specified levels.
 
 6. **Theme Switching**:
    - Ability to choose between light and dark interface themes.
 
-7. **Multilingual Support**:
+7. **Multilingualism**:
    - Support for Russian and English languages.
 
 8. **Personal Data Display**:
@@ -134,10 +134,7 @@ This project is an interactive web application built using React and Next.js, de
 3. **Adaptability**:
    - Correct display on various devices and screen resolutions.
 
-4. **Security**:
-   - Protection of personal data and security of the web platform.
-
-5. **Compatibility**:
+4. **Compatibility**:
    - Support for all modern browsers.
 
 6. **Scalability**:
@@ -147,9 +144,9 @@ This project is an interactive web application built using React and Next.js, de
 
 - React.js
 - Next.js
-- CSS-in-JS (styled-components or emotion)
+- SASS
 - i18next (for internationalization)
-- Node.js (for server functions, if necessary)
+- Node.js (for server functions)
 
 ## Architecture
 

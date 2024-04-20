@@ -1,93 +1,43 @@
-@import './_colors.scss';
-@import './breakpoints.scss';
+@import '../styles/breakpoints';
+@import '../styles/colors';
 
 .container {
-  padding-top: 10px;
-  display: grid;
-  width: 100%;
-  max-width: 90%;
-  min-height: 100%;
-  grid-template-rows: 275px 1fr;
-  grid-template-columns: 300px 1fr;
-  grid-template-areas:
-    "a a"
-    "b c";
+  // padding-top: 10px;
+  // display: grid;
+  // width: 100%;
+  // max-width: 90%;
+  // min-height: 100%;
+  // grid-template-rows: 275px 1fr;
+  // grid-template-columns: 300px 1fr;
+  // grid-template-areas:
+    // "a a"
+    // "b c";
 
-  @media (max-width: $EXTRA_LARGE) {
-    max-width: 100%;
-    padding-top: 0;
-    grid-template-columns: 215px 1fr;
-    grid-template-rows: 215px 1fr;
-  }
+  // @media (max-width: $EXTRA_LARGE) {
+  //   max-width: 100%;
+  //   padding-top: 0;
+  //   grid-template-columns: 215px 1fr;
+  //   grid-template-rows: 215px 1fr;
+  // }
 
-  .a {
-    grid-area: a;
-    // height: 275px;
-    display: flex;
-    // @media (max-width: $EXTRA_LARGE) {
-    //   height: 215px;
-    // }
-  }
+  // .a {
+  //   grid-area: a;
+  //   display: flex;
+  // }
 
-  .b {
-    grid-area: b;
-    // width: 300px;
-    background-color: $LIGHT_BLUE;
-    // height: 100%;
-    // @media (max-width: $EXTRA_LARGE) {
-    //   width: 235px;
-    // }
-    background-image: url(/left-panel-background.svg);
-    background-size: cover;
-  }
+  // .b {
+  //   grid-area: b;
+  //   background-color: $LIGHT_BLUE;
+  //   background-image: url(/left-panel-background.svg);
+  //   background-size: cover;
+  // }
 
-  .avatar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px 0 0 0;
-    width: 300px;
-    height: 100%;
-    background-color: $LIGHT_BLUE;
-
-    @media (max-width: $EXTRA_LARGE) {
-      border-radius: 0;
-      width: 215px;
-      height: auto;
-    }
-  }
-
-  .c {
-    grid-area: c;
-    background-color: white;
-    border-right: 8px solid $LIGHT_BLUE;
-    @media(max-width: $LARGE) {
-      border-right: none;
-    }
-  }
-
-
-
-  .title-container {
-    border-radius: 0 50px 0 0;
-    background-color: $GRAY;
-    height: 100%;
-    flex-grow: 1;
-
-    @media (max-width: $EXTRA_LARGE) {
-      border-radius: 0;
-    }
-  }
-
-  .avatar {
-    border-radius: 100%;
-    padding: 10px;
-    height:100%;
-    width: auto;
-
-    @media (max-width: $EXTRA_LARGE) {
-      width: 100%;
-      height: auto;
-    }
-  }
+  // .c {
+  //   grid-area: c;
+  //   background-color: white;
+  //   border-right: 8px solid $LIGHT_BLUE;
+  //   @media(max-width: $LARGE) {
+  //     border-right: none;
+  //   }
+  // }
 }

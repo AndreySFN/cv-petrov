@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import './layout.scss'
+import { Header } from "@/components/widgets";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +21,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="container">
           <div className="a">
-            <div className="avatar-container">
-              <img className="avatar" src={'/avatar.jpg'} alt='avatar' />
-            </div>
-            <div className="title-container">
-            </div>
+            <Header/>
           </div>
-          <div className="b"></div>
-          <div className="c">{children}</div>
+          {/* <div className="b"></div>
+          <div className="c">{children}</div> */}
         </div>
       </body>
     </html>

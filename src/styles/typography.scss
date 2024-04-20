@@ -1,0 +1,98 @@
+@import '../styles/breakpoints';
+@import '../styles/colors';
+
+h1 {
+    font-size: 40px;
+    @media(max-width: $EXTRA_LARGE) {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    @media(max-width: $EXTRA_LARGE) {
+        font-size: 24px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    @media(max-width: $EXTRA_LARGE) {
+        font-size: 16px;
+    }
+}
+
+h4 {
+    font-size: 24px;
+    @media(max-width: $EXTRA_LARGE) {
+        font-size: 16px;
+    }
+}
+
+h5 {
+    font-size: 20px;
+    @media(max-width: $EXTRA_LARGE) {
+        font-size: 12px;
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div {
+    & .--bold {
+        font-weight: bold;
+    }
+
+    ;
+
+    & .--italic {
+        font-style: italic;
+    }
+
+    ;
+
+    & .--uppercase {
+        text-transform: uppercase;
+    }
+
+    ;
+
+    & .--capitalize {
+        text-transform: capitalize;
+    }
+
+    ;
+
+    & .--black {
+        color: $BLACK;
+    }
+
+    ;
+
+    & .--blue {
+        color: $LIGHT_BLUE;
+    }
+
+    ;
+
+    & .--white {
+        color: $WHITE;
+    }
+
+    ;
+
+    & .--light {
+        color: $DARK_GRAY;
+    }
+
+    ;
+
+}
