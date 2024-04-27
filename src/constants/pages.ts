@@ -27,3 +27,6 @@ export const PageUrlsDictionary = {
     [PageNames.EDUCATION]: './education',
     [PageNames.CONTACTS]: './contacts'
 }
+
+
+export const ActivePagesDictionary = new Set([PageNames.WORK_EXPIRIENCE])

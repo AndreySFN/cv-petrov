@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 import './menu-option.scss';
 import Link from 'next/link';
 
@@ -6,17 +6,23 @@ export interface IMenuOptionProps {
     title: ReactNode;
     onClick?: () => void;
     isActive?: boolean;
+    isDisabled?: boolean;
     isSmall?: boolean;
     smallTitle: ReactNode;
     href: string;
 }
 
-export const MenuOption = ({ title, isActive, isSmall, smallTitle, href }: IMenuOptionProps) => {
+export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisabled }: IMenuOptionProps) => {
+    const Title = memo(() => <h2>
+        {!isSmall ? title : smallTitle}
+    </h2>)
     return (
-        <Link href={href} className={`menu-option ${isActive && '--active'}`}>
-                <h2>
-                    {!isSmall ? title : smallTitle}
-                </h2>
-        </Link>
+        <div className={`menu-option ${isActive && '--active'} ${isDisabled && '--disabled'}`}>
+            {isDisabled ?
+                <Title /> :
+                <Link href={href} className='menu-option__link'>
+                    <Title />
+                </Link>}
+        </div>
     )
 }

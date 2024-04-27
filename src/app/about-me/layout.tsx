@@ -1,5 +1,5 @@
 import { PageNames } from "@/constants";
-import { IRootLayoutProps, LeftPanelLayout } from "@/layouts";
+import { ILeftPanelLayoutProps, LeftPanelLayout } from "@/layouts";
 import { IWithParams } from "@/types";
 
-export default (props: IRootLayoutProps) => <LeftPanelLayout {...props} params={{page: PageNames.ABOUT_ME}}/>; // TODO подумать как сделать лучше
+export default (props: ILeftPanelLayoutProps) => <LeftPanelLayout {...props} params={{page: PageNames.ABOUT_ME}}/>; // TODO подумать как сделать лучше
