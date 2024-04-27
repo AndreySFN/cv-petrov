@@ -13,11 +13,12 @@ export const Menu = ({page, isSmall}: IMenuProps) => {
             {
                 Object.values(PageNames).map((name) =>
                     <MenuOption
+                        key={name}
                         title={name}
                         isSmall={isSmall}
                         smallTitle={PagesIconSrcDictionary[name]}
                         href={PageUrlsDictionary[name]}
-                        isActive={false}
+                        isActive={name === page}
                     />)
             }
         </div>

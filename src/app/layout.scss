@@ -1,11 +1,4 @@
-@import '../styles/breakpoints';
-@import '..//styles/colors';
-
 .container {
-  display: flex;
-  min-height: 100%;
-  &__content {
-    flex: 1;
-    margin: 20px 20px 20px 40px;
-  }
+    display: flex;
+    height: 100%;
 }

@@ -19,7 +19,7 @@ export const LeftPanel = ({ page }: ILeftPanelProps) => {
         })
     }, [isClosed])
     return (
-        <div className={`left_panel ${isClosed && '--closed'}`}>
+        <div className={`left_panel ${isClosed && '--closed'}`}> {/*TODO: Зарефачить опциональные классы*/}
             <div className={`left_panel__avatar ${isClosed && '--closed'}`}>
                 <img src="/avatar.jpg" alt="Avatar" />
             </div>
