@@ -13,6 +13,7 @@ export const Menu = ({page, isSmall}: IMenuProps) => {
             {
                 Object.values(PageNames).map((name) =>
                     <MenuOption
+                        isDisabled
                         key={name}
                         title={name}
                         isSmall={isSmall}
