@@ -20,7 +20,7 @@ export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisab
         <div className={`menu-option ${isActive && '--active'} ${isDisabled && '--disabled'}`}>
             {isDisabled ?
                 <Title /> :
-                <Link href={href}>
+                <Link href={href} className='menu-option__link'>
                     <Title />
                 </Link>}
         </div>
