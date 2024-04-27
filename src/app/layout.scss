@@ -1,43 +1,11 @@
 @import '../styles/breakpoints';
-@import '../styles/colors';
+@import '..//styles/colors';
 
 .container {
-  // padding-top: 10px;
-  // display: grid;
-  // width: 100%;
-  // max-width: 90%;
-  // min-height: 100%;
-  // grid-template-rows: 275px 1fr;
-  // grid-template-columns: 300px 1fr;
-  // grid-template-areas:
-    // "a a"
-    // "b c";
-
-  // @media (max-width: $EXTRA_LARGE) {
-  //   max-width: 100%;
-  //   padding-top: 0;
-  //   grid-template-columns: 215px 1fr;
-  //   grid-template-rows: 215px 1fr;
-  // }
-
-  // .a {
-  //   grid-area: a;
-  //   display: flex;
-  // }
-
-  // .b {
-  //   grid-area: b;
-  //   background-color: $LIGHT_BLUE;
-  //   background-image: url(/left-panel-background.svg);
-  //   background-size: cover;
-  // }
-
-  // .c {
-  //   grid-area: c;
-  //   background-color: white;
-  //   border-right: 8px solid $LIGHT_BLUE;
-  //   @media(max-width: $LARGE) {
-  //     border-right: none;
-  //   }
-  // }
+  display: flex;
+  min-height: 100%;
+  &__content {
+    flex: 1;
+    margin: 20px 20px 20px 40px;
+  }
 }

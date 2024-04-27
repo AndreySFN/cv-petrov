@@ -1,0 +1,93 @@
+@import '../../../styles/colors';
+
+.left_panel {
+    min-height: 100%;
+    background-color: $LIGHT_BLUE;
+    width: 300px; // Исходная ширина
+    padding: 10px;
+    transition: width 0.5s ease; // Анимация изменения ширины
+
+    &.--closed {
+        width: 50px; // Суженная ширина при добавлении класса --closed
+        padding: 0;
+    }
+
+    &__avatar {
+        width: 100%;
+        transition: width 0.5s ease, height 0.5s ease;
+
+        &.--closed {
+            width: 0px;
+        }
+
+        img {
+            padding: 10px;
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__name-container {
+        padding: 0 0 20px 0;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        // Анимация изменения ширины, высоты и размера шрифта
+        transition: width 0.5s ease, height 0.3s ease;
+
+        &.--closed {
+            width: 0px;
+            height: 0px;
+        }
+
+        h2 {
+            transition: font-size 0.2s ease;
+        }
+
+        &.--closed h2 {
+            font-size: 0px;
+        }
+    }
+
+    &.settings {
+        transition: flex-direction 0.5s ease, padding 0.5s ease, gap 0.5s, ease; // Анимация изменения направления flex-контейнера
+    }
+
+    &__close-btn {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        background-color: $DARK_BLUE;
+        position: absolute;
+        left: 275px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; // Обеспечивает, что псевдоэлемент не выйдет за рамки кнопки
+        transition: left 0.5s ease, background-color 0.3s ease; // Анимация для псевдоэлемента
+        cursor: pointer;
+
+        &:hover {
+            background-color: $DIRTY_BLUE;
+        }
+
+        &.--closed {
+            left: 20px;
+            top: -10px;
+            position: relative;
+        }
+
+        &::before {
+            font-size: 26px;
+            content: '⬅'; // Иконка или текст кнопки
+            color: $WHITE;
+            display: block;
+            transition: transform 0.5s ease; // Плавное изменение трансформации
+        }
+
+        &.--closed::before {
+            transform: scaleX(-1); // Отражение содержимого по горизонтали
+        }
+    }
+}

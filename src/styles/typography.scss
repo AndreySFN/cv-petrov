@@ -3,16 +3,14 @@
 
 h1 {
     font-size: 40px;
+    font-weight: bold;
     @media(max-width: $EXTRA_LARGE) {
         font-size: 32px;
     }
 }
 
 h2 {
-    font-size: 36px;
-    @media(max-width: $EXTRA_LARGE) {
-        font-size: 24px;
-    }
+    font-size: 24px;
 }
 
 h3 {
@@ -91,8 +89,6 @@ div {
 
     & .--light {
         color: $DARK_GRAY;
-    }
-
-    ;
+    };
 
 }

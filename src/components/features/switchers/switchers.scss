@@ -1,0 +1,13 @@
+.switchers {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 0 20px 0 0;
+    justify-content: space-between;
+    position: relative;
+    &.--closed {
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+    }
+}
