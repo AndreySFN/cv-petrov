@@ -40,4 +40,14 @@
         color: $LIGHT_GRAY;
         cursor: not-allowed;
     }
+
+    &.--short {
+        width: calc(100% + 10px);
+        h2{
+            padding: 0
+        }
+        &.--active {
+            width: calc(100% + 15px)
+        }
+    }
 }

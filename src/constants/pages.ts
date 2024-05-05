@@ -1,6 +1,6 @@
 export enum PageNames {
     OVERVIEW = 'OVERVIEW',
-    WORK_EXPIRIENCE = 'WORK EXPIRIENCE',
+    WORK_EXPERIENCE = 'WORK EXPERIENCE',
     PORTFOLIO = 'PORTFOLIO',
     SKILLS_AND_LANGUAGES = 'SKILLS & LANGUAGES',
     ABOUT_ME = 'ABOUT ME',
@@ -10,7 +10,7 @@ export enum PageNames {
 
 export const PagesIconSrcDictionary = {
     [PageNames.OVERVIEW]: '👀',
-    [PageNames.WORK_EXPIRIENCE]: '🛠',
+    [PageNames.WORK_EXPERIENCE]: '🛠',
     [PageNames.PORTFOLIO]: '💼',
     [PageNames.SKILLS_AND_LANGUAGES]: '📃',
     [PageNames.ABOUT_ME]: '👨🏻‍💻',
@@ -20,7 +20,7 @@ export const PagesIconSrcDictionary = {
 
 export const PageUrlsDictionary = {
     [PageNames.OVERVIEW]: './overview',
-    [PageNames.WORK_EXPIRIENCE]: './work-expirience',
+    [PageNames.WORK_EXPERIENCE]: './work-experience',
     [PageNames.PORTFOLIO]: './portfolio',
     [PageNames.SKILLS_AND_LANGUAGES]: './skills-and-languages',
     [PageNames.ABOUT_ME]: './about-me',
@@ -29,4 +29,4 @@ export const PageUrlsDictionary = {
 }
 
 
-export const ActivePagesDictionary = new Set([PageNames.WORK_EXPIRIENCE])
+export const ActivePagesDictionary = new Set([PageNames.WORK_EXPERIENCE])

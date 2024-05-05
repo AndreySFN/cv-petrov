@@ -1,0 +1,29 @@
+.work-exp-section {
+    width: 100%;
+    &__header {
+        display: flex;
+        width:100%;
+        align-items: center;
+        
+        &__title {
+            flex-grow: 1;
+        }
+    }
+
+    &__content {
+        padding: 0 50px;
+        overflow: hidden; // Скрывает содержимое, выходящее за пределы элемента
+        max-height: auto; // Начальная максимальная высота, достаточно большая, чтобы вместить содержимое
+        &.--closed {
+            max-height: 0; // При добавлении класса .--closed устанавливаем максимальную высоту в 0, что сворачивает элемент
+        }
+
+        &__duties-and-achivments{
+            display: flex;
+            justify-content: space-between;
+            &> *{
+                flex:1
+            }
+        }
+    }
+}

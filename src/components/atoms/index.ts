@@ -1,2 +1,7 @@
 export * from './menu-option'
 export * from './switcher'
+export * from './page-header'
+export * from './work-exp-title'
+export * from './collapse-btn'
+export * from './titled-block'
+export * from './list'

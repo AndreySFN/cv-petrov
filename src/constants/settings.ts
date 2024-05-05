@@ -17,3 +17,5 @@ export const themeSwitcherOptions = [
     { id: Themes.LIGHT, icon: '🔅' },
     { id: Themes.DARK, icon: '🌑' }
 ]
+
+export const START_DATE = new Date(2019, 12, 1)
