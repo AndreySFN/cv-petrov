@@ -1,0 +1,38 @@
+@import '../../../styles/colors';
+
+.collapse-btn {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background-color: $DARK_BLUE;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; // Обеспечивает, что псевдоэлемент не выйдет за рамки кнопки
+    transition: left 0.5s ease, background-color 0.3s ease; // Анимация для псевдоэлемента
+    cursor: pointer;
+
+    &:hover {
+        background-color: $DIRTY_BLUE;
+    }
+
+    &::before {
+        width: 70%;
+        height: 70%;
+        content: '';
+        background-image: url('/icons/angle-left.png'); // Путь к изображению
+        background-size: contain;
+        color: $WHITE;
+        display: block;
+        transition: transform 0.5s ease; // Плавное изменение трансформации
+    }
+
+    &.--closed::before {
+        transform: scaleX(-1); // Отражение содержимого по горизонтали
+    }
+
+    &.--up-down {
+        rotate: 90deg;
+    }
+}

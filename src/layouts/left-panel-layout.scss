@@ -1,7 +1,17 @@
 @import '../styles/breakpoints';
 @import '..//styles/colors';
+.left-panel-layout{
+  display: flex;
+  width: 100%;
+  &__content {
+    flex: 1;
+    background-color: $WHITE;
+    padding: 20px;
+    padding-left: 40px;
+    position: relative;
+    z-index: 0;
+    min-height: 100%;
+    height: max-content;
+  }
 
-.content {
-  flex: 1;
-  margin: 20px 20px 20px 40px;
 }
