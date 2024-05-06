@@ -99,8 +99,8 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
 export const CONTACTS: Array<IIconedRecordProps> = [
     {   
         iconSrc: '/icons/telegram.png',
-        href: 'https://t.me/yargash',
-        text: '@yargash',
+        href: 'https://t.me/a_petrov_work',
+        text: '@a_petrov_work',
     },
     {   
         iconSrc: '/icons/mail.png',
@@ -138,7 +138,7 @@ export const LANGUAGES: Array<ILangCardProps> = [
         iconSrc: '/flags/usa.png'
     },
     {
-        lang: 'Russian',
+        lang: 'Italian',
         langLvl: LANG_LEVEL.A1,
         iconSrc: '/flags/italy.png'
     },
