@@ -106,3 +106,8 @@ body {
   box-sizing: border-box;
   box-sizing: inherit;
 }
+
+*:visited {
+  color: inherit; /* Это установит цвет текста ссылок таким же, как и у непосещённых ссылок */
+  text-decoration: none; /* Убирает подчёркивание текста */
+}

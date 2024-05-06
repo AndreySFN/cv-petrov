@@ -1,10 +1,11 @@
 'use client'
-import { CollapseBtn, IWorkExpTitleProps, List, TitledBlock, WorkExpTitle } from '@/components/atoms';
+import { CollapseBtn, List, TitledBlock, WorkExpTitle } from '@/components/atoms';
 import './work-exp-section.scss';
 import { useState } from 'react';
+import { IWorkExpProps } from '@/components/molecules';
 
 export interface IWorkExpSectionProps {
-    titleProps: IWorkExpTitleProps;
+    titleProps: IWorkExpProps;
     projectDescription?: string;
     mainStack?: string;
     duties?: Array<string>;
@@ -20,7 +21,7 @@ export const WorkExpSection = ({ titleProps, projectDescription, achivments, dut
                     <WorkExpTitle {...titleProps} />
                 </div>
                 <div className='work-exp-section__header__collapse-btn'>
-                    <CollapseBtn direction='up-down' isOpen={isOpened} onClick={() => setIsOpened(prev => !prev)} size={30} />
+                    <CollapseBtn direction='up-down' isOpen={isOpened} onClick={() => setIsOpened(prev => !prev)} size={30} /> {/*TODO: Вынести в collapse*/}
                 </div>
             </div>
             <div className={`work-exp-section__content ${!isOpened && '--closed'}`}>
