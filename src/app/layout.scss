@@ -6,7 +6,7 @@
     min-height: 100%;
     height: 1px;
     &__content {
-      height: 1px;
+      height: max-content;
       flex: 1;
       background-color: $WHITE;
       padding: 20px;
