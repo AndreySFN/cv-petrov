@@ -13,9 +13,11 @@ export interface IMenuOptionProps {
 }
 
 export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisabled }: IMenuOptionProps) => {
-    const Title = memo(() => <h2>
-        {!isSmall ? title : smallTitle}
-    </h2>)
+
+
+    //TODO: Подумать над рефакторингом
+    const Title = () => <h2>{!isSmall ? title : smallTitle}</h2>
+
     return (
         <div className={`menu-option ${isActive && '--active'} ${isDisabled && '--disabled'} ${isSmall && '--short'}`}>
             {isDisabled ?

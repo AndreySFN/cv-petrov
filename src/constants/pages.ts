@@ -19,14 +19,14 @@ export const PagesIconSrcDictionary = {
 }
 
 export const PageUrlsDictionary = {
-    [PageNames.OVERVIEW]: './overview',
-    [PageNames.WORK_EXPERIENCE]: './work-experience',
-    [PageNames.PORTFOLIO]: './portfolio',
-    [PageNames.SKILLS_AND_LANGUAGES]: './skills-and-languages',
-    [PageNames.ABOUT_ME]: './about-me',
-    [PageNames.EDUCATION]: './education',
-    [PageNames.CONTACTS]: './contacts'
+    [PageNames.OVERVIEW]: '/overview',
+    [PageNames.WORK_EXPERIENCE]: '/work-experience',
+    [PageNames.PORTFOLIO]: '/portfolio',
+    [PageNames.SKILLS_AND_LANGUAGES]: '/skills-and-languages',
+    [PageNames.ABOUT_ME]: '/about-me',
+    [PageNames.EDUCATION]: '/education',
+    [PageNames.CONTACTS]: '/contacts'
 }
 
 
-export const ActivePagesDictionary = new Set([PageNames.WORK_EXPERIENCE])
+export const ActivePagesDictionary = new Set([PageNames.WORK_EXPERIENCE, PageNames.CONTACTS])
