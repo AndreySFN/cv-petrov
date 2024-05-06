@@ -116,3 +116,5 @@ export const CONTACTS: Array<IIconedLinkProps> = [
         text: 'https://linkedin.com/in/andreysfn'
     },
 ]
+
+export const POSITION = 'MIDDLE+/SENIOR FRONTEND'
