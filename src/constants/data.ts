@@ -1,4 +1,4 @@
-import { IWorkExpTitleProps } from "@/components/atoms"
+import { IIconedLinkProps, IWorkExpTitleProps } from "@/components/atoms"
 import { IWorkExpSectionProps } from "@/components/features"
 
 export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
@@ -91,4 +91,28 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
             "Convinced management of the impracticality of supporting IE 11"
         ]
     }
+]
+
+
+export const CONTACTS: Array<IIconedLinkProps> = [
+    {   
+        iconSrc: '/icons/russia.png',
+        href: 'tel: +79162894638',
+        text: '+7 (916) 289 46-38'
+    },
+    {   
+        iconSrc: '/icons/armenia.png',
+        href: 'tel: +37491619864',
+        text: '+374 91 61 98 64'
+    },
+    {   
+        iconSrc: '/icons/telegram.png',
+        href: 'https://t.me/yargash',
+        text: '@yargash',
+    },
+    {   
+        iconSrc: '/icons/linkedin.png',
+        href: 'https://linkedin.com/in/andreysfn',
+        text: 'https://linkedin.com/in/andreysfn'
+    },
 ]

@@ -1,3 +1,5 @@
-export default function AboutMe() {
-    return <div>Contacts</div>
+import { Contacts } from "@/components/pages";
+
+export default function ContactsRoute() {
+    return <Contacts/>
 }

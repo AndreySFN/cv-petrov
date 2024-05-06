@@ -3,11 +3,11 @@ import { MenuOption } from "../../atoms/menu-option";
 import './menu.scss';
 
 export interface IMenuProps {
-    page: string;
+    route: string;
     isSmall?: boolean;
 }
 
-export const Menu = ({page, isSmall}: IMenuProps) => {
+export const Menu = ({route: page, isSmall}: IMenuProps) => {
     return (
         <div className='menu'>
             {
@@ -19,7 +19,7 @@ export const Menu = ({page, isSmall}: IMenuProps) => {
                         isSmall={isSmall}
                         smallTitle={PagesIconSrcDictionary[name]}
                         href={PageUrlsDictionary[name]}
-                        isActive={name === page}
+                        isActive={page === PageUrlsDictionary[name]}
                     />)
             }
         </div>

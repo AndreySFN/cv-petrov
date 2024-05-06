@@ -20,7 +20,7 @@ interface ISwitcherOptionProps<T> extends ISwitcherOption<T> {
 function SwitcherOption<T extends unknown>({ icon, isActive, onClick, id, isShort, isDisabled }: ISwitcherOptionProps<T>) {
     return (
         <div
-            onClick={() => onClick && onClick(id)}
+            onClick={() => onClick && !isDisabled && onClick(id)}
             className={`switcher__option ${isActive && '--active'} ${isShort && '--short'} ${isDisabled && '--disabled'}`}
         >
             {icon}
@@ -70,13 +70,13 @@ export const Switcher = <T extends unknown>({ options, onChange, activeId, isSho
             <ShortSwitcher
                 options={options}
                 isDisabled={isDisabled}
-                onChange={!isDisabled && onChange}
+                onChange={onChange}
                 activeId={activeId}
             /> :
             <FullSwitcher
                 options={options}
                 isDisabled={isDisabled}
-                onChange={!isDisabled && onChange}
+                onChange={onChange}
                 activeId={activeId}
             />
     )
