@@ -1,5 +1,7 @@
-import { IIconedLinkProps, IWorkExpTitleProps } from "@/components/atoms"
+import { IIconedRecordProps } from "@/components/atoms"
 import { IWorkExpSectionProps } from "@/components/features"
+import { ILangCardProps } from "@/components/molecules"
+import { LANG_LEVEL } from "./lang-levels"
 
 export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
     {
@@ -94,7 +96,17 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
 ]
 
 
-export const CONTACTS: Array<IIconedLinkProps> = [
+export const CONTACTS: Array<IIconedRecordProps> = [
+    {   
+        iconSrc: '/icons/telegram.png',
+        href: 'https://t.me/yargash',
+        text: '@yargash',
+    },
+    {   
+        iconSrc: '/icons/mail.png',
+        href: 'mailto:andreysfn@yandex.ru',
+        text: 'andreysfn@yandex.ru',
+    },
     {   
         iconSrc: '/icons/russia.png',
         href: 'tel: +79162894638',
@@ -106,13 +118,42 @@ export const CONTACTS: Array<IIconedLinkProps> = [
         text: '+374 91 61 98 64'
     },
     {   
-        iconSrc: '/icons/telegram.png',
-        href: 'https://t.me/yargash',
-        text: '@yargash',
-    },
-    {   
         iconSrc: '/icons/linkedin.png',
         href: 'https://linkedin.com/in/andreysfn',
-        text: 'https://linkedin.com/in/andreysfn'
+        text: 'andreysfn'
     },
+]
+
+export const POSITION = 'MIDDLE+/SENIOR FRONTEND'
+
+export const LANGUAGES: Array<ILangCardProps> = [
+    {
+        lang: 'Russian',
+        langLvl: LANG_LEVEL.NATIVE,
+        iconSrc: '/flags/russia.png'
+    },
+    {
+        lang: 'English',
+        langLvl: LANG_LEVEL.B2,
+        iconSrc: '/flags/usa.png'
+    },
+    {
+        lang: 'Russian',
+        langLvl: LANG_LEVEL.A1,
+        iconSrc: '/flags/italy.png'
+    },
+]
+
+export const TECH_AND_SKILLS = [
+    ['HTML5, CSS3, SASS, LESS, JS, TypeScript'],
+    ['Webpack, babel, loaders'],
+    ['React, Redux, Next.js, Redux toolkit, redux-thunk, React/Redux devtools'],
+    ['Jest, Enzyme'],
+    ['Material UI, Ant Design, styled-components, Storybook'],
+    ['Node.js + express.js, Java+Spring MVC, mapstruct'],
+    ['Momolith, Micro-frontend, feature slice, atomic design, SPA, SSR, REST, GraphQL, WebSockets'],
+    ['LocalStorage, SessionStorage, cookies, WebWorker, ServiceWorkers'],
+    ['i18n'],
+    ['Responsive Web Design, Cross-Browser Web Design'],
+    ['Experience with Linux, KDEPlasma/GNOME, MacOS, Windows 95-10']
 ]

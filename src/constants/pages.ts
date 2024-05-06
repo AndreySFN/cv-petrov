@@ -29,4 +29,4 @@ export const PageUrlsDictionary = {
 }
 
 
-export const ActivePagesDictionary = new Set([PageNames.WORK_EXPERIENCE, PageNames.CONTACTS])
+export const ActivePagesDictionary = new Set([PageNames.WORK_EXPERIENCE, PageNames.CONTACTS, PageNames.OVERVIEW])
