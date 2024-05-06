@@ -1,3 +1,5 @@
+import { UnderConstruction } from "@/components/pages";
+
 export default function AboutMe() {
-    return <div>Portfolio</div>
+    return <UnderConstruction/>
 }
