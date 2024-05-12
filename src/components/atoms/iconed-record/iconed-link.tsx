@@ -23,7 +23,7 @@ export const IconedRecord = ({ href, iconSrc, text, bold = false }: IIconedRecor
 
     return <>
         {
-            href ? <Link href={href}>
+            href ? <Link href={href} target='_blank'>
                 <Content/>
             </Link> :
             <Content/>

@@ -1,10 +1,11 @@
 import { ReactNode, memo } from 'react';
 import './menu-option.scss';
 import Link from 'next/link';
+import { TStateSetter } from '@/types';
 
 export interface IMenuOptionProps {
     title: ReactNode;
-    onClick?: () => void;
+    onClick?: VoidFunction;
     isActive?: boolean;
     isDisabled?: boolean;
     isSmall?: boolean;
@@ -12,14 +13,14 @@ export interface IMenuOptionProps {
     href: string;
 }
 
-export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisabled }: IMenuOptionProps) => {
+export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisabled, onClick }: IMenuOptionProps) => {
 
 
     //TODO: Подумать над рефакторингом
     const Title = () => <h2>{!isSmall ? title : smallTitle}</h2>
 
     return (
-        <div className={`menu-option ${isActive && '--active'} ${isDisabled && '--disabled'} ${isSmall && '--short'}`}>
+        <div onClick={() => onClick && onClick()} className={`menu-option ${isActive && '--active'} ${isDisabled && '--disabled'} ${isSmall && '--short'}`}>
             {isDisabled ?
                 <Title /> :
                 <Link href={href} className='menu-option__link'>

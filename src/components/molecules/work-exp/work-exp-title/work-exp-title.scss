@@ -9,8 +9,8 @@ $gap-size: 0;
 .work-exp-title {
     display: flex;
     align-items: center;
-    padding: 10px 0 10px 10px;
-
+    padding: 1rem 0 1rem 1rem;
+    text-wrap: balance;
     @media(max-width: $SMALL) {
         align-items: self-start;
         flex-direction: column;
@@ -19,8 +19,8 @@ $gap-size: 0;
     &__left-container {
         display: flex;
         align-items: center;
-        gap: 10px;
-        padding-right: 10px;
+        gap: 1rem;
+        padding-right: 1rem;
     }
 
     &__right-container {
@@ -50,7 +50,7 @@ $gap-size: 0;
         &__period {
             display: flex;
             align-items: center;
-            padding-right: 20px;
+            padding-right: 2rem;
             align-self: flex-start;
         }
 
@@ -62,7 +62,7 @@ $gap-size: 0;
         &__period {
             justify-self: flex-end;
             grid-row: 3; // Период на третьей строке
-            padding-right: 10px; // Индивидуальное правое отступ для элемента period
+            padding-right: 1rem; // Индивидуальное правое отступ для элемента period
         }
     }
 }

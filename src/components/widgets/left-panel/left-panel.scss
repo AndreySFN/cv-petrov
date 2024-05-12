@@ -4,6 +4,11 @@
 .left_panel {
     min-width: 30rem;
     transition: min-width 0.5s ease;
+    z-index: 2;
+
+    @media(max-width: $EXTRA_SMALL) {
+        position: absolute;
+    }
 
     &.--closed {
         min-width: 5rem;
@@ -110,6 +115,11 @@
         @media(max-width: $EXTRA_LARGE) {
             height: 40px;
             width: 40px;
+        }
+
+        @media(max-width: $SMALL) {
+            height: 30px;
+            width: 30px;
         }
     }
 }
