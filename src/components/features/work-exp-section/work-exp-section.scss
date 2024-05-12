@@ -1,8 +1,13 @@
 .work-exp-section {
     width: 100%;
+    .collapse-btn {
+        height: 30px;
+        width: 30px;
+    }
     &__header {
         display: flex;
         width:100%;
+        overflow: hidden;
         align-items: center;
         
         &__title {
@@ -12,7 +17,7 @@
     }
 
     &__content {
-        padding: 0 50px;
+        padding: 0 3rem;
         overflow: hidden; // Скрывает содержимое, выходящее за пределы элемента
         max-height: auto; // Начальная максимальная высота, достаточно большая, чтобы вместить содержимое
         &.--closed {
@@ -21,9 +26,11 @@
 
         &__duties-and-achivments{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             &> *{
-                flex:1
+                min-width: 15rem;
+                text-wrap: pretty;
             }
         }
     }

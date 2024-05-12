@@ -11,6 +11,6 @@ export interface ILangCardProps {
 export const LangCard = ({lang, langLvl, iconSrc}: ILangCardProps) => {
     return <div>
         <IconedRecord iconSrc={iconSrc} text={lang} bold/>
-        <div>{langLvl}</div>
+        <h4>{langLvl}</h4>
     </div>
 }
