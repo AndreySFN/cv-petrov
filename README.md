@@ -83,13 +83,15 @@
 | Начинается с большой буквы и имеет "дженерик"  | ```Section<experience>``` | Элемент или группа является переиспользуемым компонентом. "Дженерик" указывает на назначение экземпляра компонента |
 | Начинается с маленькой буквы | ```title``` | является пропсом |
 
+Используемые ```брэйкпоинты``` описаны в файле [```src/styles/_breakpoints.scss```](./src/styles/_breakpoints.scss)
+
 # [EN] Personal CV Website
 
-## Project Description (Goals):
+## Project Description (Goals)
 
-This project is an interactive web application built using React and Next.js, designed to showcase my professional resume. The website includes detailed information about me, my work experience, project portfolio, and contact information. The application supports multilingualism (Russian and English) and offers the ability to switch between light and dark themes.
+This project is an interactive web application created using React and Next.js, designed to showcase my professional resume. The website includes detailed information about me, my work experience, project portfolio, and contact information. The application supports multilingualism (Russian and English) and offers the ability to switch between light and dark themes.
 
-## Functional Requirements:
+## Functional Requirements
 
 1. **Work Information**:
    - Display a list of companies, positions, and periods of employment.
@@ -100,7 +102,7 @@ This project is an interactive web application built using React and Next.js, de
    - Presentation of personal information and professional interests.
 
 3. **Portfolio**:
-   - Display projects with the option for detailed viewing of each.
+   - Display projects with the ability to view each in detail.
 
 4. **Contact Information**:
    - Links to social networks and professional platforms.
@@ -108,19 +110,19 @@ This project is an interactive web application built using React and Next.js, de
    - Email address.
 
 5. **Language Proficiency Levels**:
-   - Display information about language proficiency with specified levels.
+   - Display information about language skills with proficiency levels.
 
 6. **Theme Switching**:
-   - Ability to choose between light and dark interface themes.
+   - Ability to choose between a light and dark interface theme.
 
 7. **Multilingualism**:
    - Support for Russian and English languages.
 
-8. **Personal Data Display**:
+8. **Display of Personal Data**:
    - Full name, desired position, brief description.
    - Automatic calculation of work experience.
 
-9. **Export CV to PDF**:
+9. **CV Export to PDF**:
    - Ability to save the resume in PDF format.
 
 ## Non-Functional Requirements
@@ -129,7 +131,7 @@ This project is an interactive web application built using React and Next.js, de
    - High loading speed and responsiveness of the application.
 
 2. **Usability**:
-   - Intuitive interface accessible to users of all levels.
+   - An intuitive interface accessible to users of all levels.
 
 3. **Adaptability**:
    - Correct display on various devices and screen resolutions.
@@ -137,7 +139,7 @@ This project is an interactive web application built using React and Next.js, de
 4. **Compatibility**:
    - Support for all modern browsers.
 
-6. **Scalability**:
+5. **Scalability**:
    - Easy addition of content and functionality.
 
 ## Technologies
@@ -154,16 +156,18 @@ This project is an interactive web application built using React and Next.js, de
 
 ## Data Model
 
-The data model is described in the file [```src/types/data.model.ts```](./src/types/data.model.ts)
+The data model is described in the file [`src/types/data.model.ts`](./src/types/data.model.ts)
 
 ## Design
 
-Design references are available at this [link](https://www.figma.com/file/kY2MLfxX0K0WqTLJQ5iInD/CV-Petrov?type=design&node-id=5-431&mode=design&t=i5vBH6dY8X4iNS63-0)
+Design references are available at [this link](https://www.figma.com/file/kY2MLfxX0K0WqTLJQ5iInD/CV-Petrov?type=design&node-id=5-431&mode=design&t=i5vBH6dY8X4iNS63-0).
 
 Each element and group is named according to the following principle:
-| Principle    | Example                | Description                             |
-|-----------------|-----------------------|--------------------------------------|
-| Starts with "_"  | ```_layout``` | Not related to further layout and is used only in Figma |
-| Starts with an uppercase letter | ```Header``` | The element or group is a styled HTML element |
-| Starts with an uppercase letter and has "generic"  | ```Section<experience>``` | The element or group is a reusable component. "Generic" indicates the purpose of the component instance |
-| Starts with a lowercase letter | ```title``` | is a prop |
+| Principle  | Example               | Description                          |
+|------------|-----------------------|--------------------------------------|
+| Starts with "_"  | `_layout` | Not involved in further layout and used only in Figma |
+| Starts with a capital letter | `Header` | The element or group is a stylized HTML element |
+| Starts with a capital letter and includes "generic"  | `Section<experience>` | The element or group is a reusable component. "Generic" indicates the purpose of the component instance |
+| Starts with a lowercase letter | `title` | is a prop |
+
+Used `breakpoints` are described in the file [`src/styles/_breakpoints.scss`](./src/styles/_breakpoints.scss)
