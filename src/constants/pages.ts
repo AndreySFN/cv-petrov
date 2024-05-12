@@ -19,13 +19,13 @@ export const PagesIconSrcDictionary = {
 }
 
 export const PageUrlsDictionary = {
-    [PageNames.OVERVIEW]: '/overview',
-    [PageNames.WORK_EXPERIENCE]: '/work-experience',
-    [PageNames.PORTFOLIO]: '/portfolio',
-    [PageNames.SKILLS_AND_LANGUAGES]: '/skills-and-languages',
-    [PageNames.ABOUT_ME]: '/about-me',
-    [PageNames.EDUCATION]: '/education',
-    [PageNames.CONTACTS]: '/contacts'
+    [PageNames.OVERVIEW]: '/cv/overview', //TODO: Убрать костыл
+    [PageNames.WORK_EXPERIENCE]: '/cv/work-experience',
+    [PageNames.PORTFOLIO]: '/cv/portfolio',
+    [PageNames.SKILLS_AND_LANGUAGES]: '/cv/skills-and-languages',
+    [PageNames.ABOUT_ME]: '/cv/about-me',
+    [PageNames.EDUCATION]: '/cv/education',
+    [PageNames.CONTACTS]: '/cv/contacts'
 }
 
 

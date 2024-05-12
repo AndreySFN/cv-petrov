@@ -13,12 +13,12 @@ export interface IIconedRecordProps {
 export const IconedRecord = ({ href, iconSrc, text, bold = false }: IIconedRecordProps) => {
 
     const Content = () => <div className='iconed-record'>
-        <span className='iconed-record__icon'>
+        <div className='iconed-record__icon'>
             {iconSrc && <Image src={iconSrc} alt={text} height={50} width={50} />}
-        </span>
-        <span className='iconed-record__text'>
+        </div>
+        <div className='iconed-record__text'>
             <h2 className={`--blue ${bold && '--bold'}`}>{text}</h2>
-        </span>
+        </div>
     </div>
 
     return <>
