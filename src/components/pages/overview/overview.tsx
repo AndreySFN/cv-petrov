@@ -28,18 +28,18 @@ export const Overview = () => {
                 </TitledBlock>
                 <TitledBlock title='Work experience:'>
                     <OverviewBlock>
-                        {WORK_EXPERIENCE.map(({ titleProps }) => <WorkExpCard {...titleProps} />)}
+                        {WORK_EXPERIENCE.map(({ titleProps }) => <WorkExpCard key={titleProps.startDate.toString()} {...titleProps} />)}
                     </OverviewBlock>
                 </TitledBlock>
                 <TitledBlock title='Languages:'>
                     <OverviewBlock>
-                        {LANGUAGES.map((props) => <LangCard {...props} />)}
+                        {LANGUAGES.map((props) => <LangCard key={props.lang} {...props} />)}
                     </OverviewBlock>
                 </TitledBlock>
             </div>
             <TitledBlock title='Contacts:'>
                 <div className='overview__contacts'>
-                    {CONTACTS.map((props) => <IconedRecord {...props} />)}
+                    {CONTACTS.map((props) => <IconedRecord key={props.text} {...props} />)}
                 </div>
             </TitledBlock>
             {/* <TitledBlock title='More technologies and skills:'>
