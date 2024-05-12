@@ -11,7 +11,7 @@ export const TitledBlock = ({children, title}: ITitledBlockProps) => {
             <h3 className='--blue --half-bold'>{title}</h3>
         </div>
         <div className='titled_block__content'>
-            {children}
+            <p>{children}</p>
         </div>
     </div>)
 }

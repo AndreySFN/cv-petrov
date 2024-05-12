@@ -36,12 +36,12 @@ export const Overview = () => {
                         {LANGUAGES.map((props) => <LangCard key={props.lang} {...props} />)}
                     </OverviewBlock>
                 </TitledBlock>
+                <TitledBlock title='Contacts:'>
+                    <OverviewBlock>
+                        {CONTACTS.map((props) => <IconedRecord key={props.text} {...props} />)}
+                    </OverviewBlock>
+                </TitledBlock>
             </div>
-            <TitledBlock title='Contacts:'>
-                <div className='overview__contacts'>
-                    {CONTACTS.map((props) => <IconedRecord key={props.text} {...props} />)}
-                </div>
-            </TitledBlock>
             {/* <TitledBlock title='More technologies and skills:'>
                 <List items={TECH_AND_SKILLS}/>
             </TitledBlock> */}

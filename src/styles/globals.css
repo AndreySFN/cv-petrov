@@ -1,4 +1,8 @@
 /* Reset and base styles  */
+li {
+  text-indent: -3rem; /* Отрицательный отступ для всех строк кроме первой */
+  padding-left: 3rem;
+}
 
 *:visited {
   color: inherit; /* Это установит цвет текста ссылок таким же, как и у непосещённых ссылок */

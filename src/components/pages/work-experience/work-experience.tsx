@@ -1,7 +1,6 @@
 import { WorkExpSection } from '@/components/features'
 import './work-experience.scss'
 import { WORK_EXPERIENCE } from '@/constants'
-import { Test } from '@/components/atoms/test'
 import { PageHeader } from '@/components/atoms'
 import { getExperiencePeriod } from '@/utils'
 

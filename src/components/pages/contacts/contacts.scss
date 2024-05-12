@@ -1,11 +1,12 @@
 .contacts {
     display: flex;
     flex-direction: column;
-    width:100%;
-    padding-left: 50px;
+    width: 100%;
+    padding-left: 5rem;
+
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 2rem;
     }
 }

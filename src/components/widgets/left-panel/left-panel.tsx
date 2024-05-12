@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 
 export const LeftPanel = () => {
     const route = usePathname()
-    const [isClosed, setIsClosed] = useState<boolean>(false);
+    const [isClosed, setIsClosed] = useState<boolean>(true);
     const handleBtnClick = () => setIsClosed(prev => !prev)
     return (
         <div className={`left_panel ${isClosed && '--closed'}`}>
@@ -22,7 +22,7 @@ export const LeftPanel = () => {
                 </div>
                 <div className={`left_panel__content__settings ${isClosed && '--closed'}`}>
                     <CollapseBtn className='left-panel__collapse' isOpen={!isClosed} onClick={handleBtnClick} direction='left-right' />
-                    <Switchers closed={isClosed} />
+                    <Switchers className='left_panel__switchers' closed={isClosed} />
                 </div>
                 <Menu isSmall={isClosed} route={route} />
             </div>
