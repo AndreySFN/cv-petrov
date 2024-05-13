@@ -5,6 +5,8 @@ import { Menu } from '@/components/features/menu/menu';
 import { Switchers } from '@/components/features';
 import { CollapseBtn } from '@/components/atoms';
 import { TStateSetter } from '@/types';
+import Image from 'next/image'
+import Link from 'next/link';
 
 export interface ILeftPanelProps {
     route: string;
@@ -12,21 +14,28 @@ export interface ILeftPanelProps {
     setIsOpened: TStateSetter<boolean>
 }
 
-    export const LeftPanel = ({isOpened, route, setIsOpened}: ILeftPanelProps) => {
+export const LeftPanel = ({ isOpened, route, setIsOpened }: ILeftPanelProps) => {
     return (
         <div className={`left_panel ${!isOpened && '--closed'}`}> {/* TODO: Вынести на уровень выше */}
             <div className={`left_panel__content ${!isOpened && '--closed'}`}> {/*TODO: Зарефачить опциональные классы*/}
-                <div className={`left_panel__content__avatar ${!isOpened && '--closed'}`}>
-                    <img src="/avatar.jpg" alt="Avatar" />
+                <div>
+                    <div className={`left_panel__content__avatar ${!isOpened && '--closed'}`}>
+                        <img src="/avatar.jpg" alt="Avatar" />
+                    </div>
+                    <div className={`left_panel__content__name-container ${!isOpened && '--closed'}`}>
+                        <h2 className='left_panel__content__name --white --half-bold'>Andrei V. Petrov</h2>
+                    </div>
+                    <div className={`left_panel__content__settings ${!isOpened && '--closed'}`}>
+                        <CollapseBtn className='left-panel__collapse' isOpen={isOpened} setIsOpen={setIsOpened} direction='left-right' />
+                        <Switchers className='left_panel__switchers' closed={!isOpened} />
+                    </div>
+                    <Menu isSmall={!isOpened} route={route} setIsOpened={setIsOpened} />
                 </div>
-                <div className={`left_panel__content__name-container ${!isOpened && '--closed'}`}>
-                    <h2 className='left_panel__content__name --white --half-bold'>Andrei V. Petrov</h2>
+                <div className={`left_panel__download-btn ${!isOpened && '--closed'}`}>
+                    <Link href='/CV_front-end_Petrov.pdf'>
+                        <Image alt='download' src='/icons/download.png' height={50} width={50} />
+                    </Link>
                 </div>
-                <div className={`left_panel__content__settings ${!isOpened && '--closed'}`}>
-                    <CollapseBtn className='left-panel__collapse' isOpen={isOpened} setIsOpen={setIsOpened} direction='left-right' />
-                    <Switchers className='left_panel__switchers' closed={!isOpened} />
-                </div>
-                <Menu isSmall={!isOpened} route={route} setIsOpened={setIsOpened} />
             </div>
         </div>
     )
