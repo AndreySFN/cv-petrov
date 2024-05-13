@@ -6,10 +6,10 @@ import { TStateSetter } from "@/types";
 export interface IMenuProps {
     route: string;
     isSmall?: boolean;
-    setIsClosed: TStateSetter<boolean>;
+    setIsOpened: TStateSetter<boolean>;
 }
 
-export const Menu = ({route: page, isSmall, setIsClosed}: IMenuProps) => {
+export const Menu = ({route: page, isSmall, setIsOpened}: IMenuProps) => {
     return (
         <div className={`menu ${isSmall && '--short'}`}>
             {
@@ -21,7 +21,7 @@ export const Menu = ({route: page, isSmall, setIsClosed}: IMenuProps) => {
                         isSmall={isSmall}
                         smallTitle={PagesIconSrcDictionary[name]}
                         href={PageUrlsDictionary[name]}
-                        onClick={() => setIsClosed(true)}
+                        onClick={() => setIsOpened(false)}
                         isActive={page === PageUrlsDictionary[name]}
                     />)
             }

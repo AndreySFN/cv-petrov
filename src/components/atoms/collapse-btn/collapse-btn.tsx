@@ -6,14 +6,14 @@ export type TCollapseBtnDirection = 'up-down' | 'left-right';
 
 export interface ICollapseBtnProps {
     isOpen: boolean;
-    setIsClosed: TStateSetter<boolean>;
+    setIsOpen: TStateSetter<boolean>;
     direction?: TCollapseBtnDirection;
     className?: string;
 }
 
-export const CollapseBtn = ({ isOpen, setIsClosed, direction, className }: ICollapseBtnProps) => {
+export const CollapseBtn = ({ isOpen, setIsOpen, direction, className }: ICollapseBtnProps) => {
     return <div
         className={`collapse-btn ${!isOpen && '--closed'} ${direction === 'up-down' && '--up-down'}`.concat(className ? ` ${className}` : '')}
-        onClick={() => setIsClosed(isOpen)}
+        onClick={() => setIsOpen(!isOpen)}
     />
 }

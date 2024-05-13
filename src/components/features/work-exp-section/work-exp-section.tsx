@@ -21,7 +21,7 @@ export const WorkExpSection = ({ titleProps, projectDescription, achivments, dut
                     <WorkExpTitle {...titleProps} />
                 </div>
                 <div className='work-exp-section__header__collapse-btn'>
-                    <CollapseBtn direction='up-down' isOpen={isOpened} setIsClosed={setIsOpened} />
+                    <CollapseBtn direction='up-down' isOpen={isOpened} setIsOpen={setIsOpened} />
                 </div>
             </div>
             <div className={`work-exp-section__content ${!isOpened && '--closed'}`}>
