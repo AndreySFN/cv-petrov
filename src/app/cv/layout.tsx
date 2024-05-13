@@ -8,17 +8,17 @@ import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }: IWithChildren) {
   const route = usePathname()
-  const [isClosed, setIsClosed] = useState<boolean>(true);
-  const handleBtnClick = () => setIsClosed(prev => !prev);
+  const [isOpened, setIsOpened] = useState<boolean>(true);
+  const handleBtnClick = () => setIsOpened(prev => !prev);
 
   return (
     <div className="container">
       <LeftPanel
-        isClosed={isClosed}
+        isOpened={isOpened}
         route={route}
-        setClosed={setIsClosed}
+        setIsOpened={setIsOpened}
       />
-      <div className={`container__wrapper ${isClosed && '--hidden'}`} onClick={handleBtnClick}/>
+      <div className={`container__wrapper ${!isOpened && '--hidden'}`} onClick={handleBtnClick}/>
       <div className='container__content'>
         {children}
       </div>

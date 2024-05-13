@@ -8,25 +8,25 @@ import { TStateSetter } from '@/types';
 
 export interface ILeftPanelProps {
     route: string;
-    isClosed: boolean;
-    setClosed: TStateSetter<boolean>
+    isOpened: boolean;
+    setIsOpened: TStateSetter<boolean>
 }
 
-    export const LeftPanel = ({isClosed, route, setClosed}: ILeftPanelProps) => {
+    export const LeftPanel = ({isOpened, route, setIsOpened}: ILeftPanelProps) => {
     return (
-        <div className={`left_panel ${isClosed && '--closed'}`}> {/* TODO: Вынести на уровень выше */}
-            <div className={`left_panel__content ${isClosed && '--closed'}`}> {/*TODO: Зарефачить опциональные классы*/}
-                <div className={`left_panel__content__avatar ${isClosed && '--closed'}`}>
+        <div className={`left_panel ${!isOpened && '--closed'}`}> {/* TODO: Вынести на уровень выше */}
+            <div className={`left_panel__content ${!isOpened && '--closed'}`}> {/*TODO: Зарефачить опциональные классы*/}
+                <div className={`left_panel__content__avatar ${!isOpened && '--closed'}`}>
                     <img src="/avatar.jpg" alt="Avatar" />
                 </div>
-                <div className={`left_panel__content__name-container ${isClosed && '--closed'}`}>
+                <div className={`left_panel__content__name-container ${!isOpened && '--closed'}`}>
                     <h2 className='left_panel__content__name --white --half-bold'>Andrei V. Petrov</h2>
                 </div>
-                <div className={`left_panel__content__settings ${isClosed && '--closed'}`}>
-                    <CollapseBtn className='left-panel__collapse' isOpen={!isClosed} setIsClosed={setClosed} direction='left-right' />
-                    <Switchers className='left_panel__switchers' closed={isClosed} />
+                <div className={`left_panel__content__settings ${!isOpened && '--closed'}`}>
+                    <CollapseBtn className='left-panel__collapse' isOpen={isOpened} setIsOpen={setIsOpened} direction='left-right' />
+                    <Switchers className='left_panel__switchers' closed={!isOpened} />
                 </div>
-                <Menu isSmall={isClosed} route={route} setIsClosed={setClosed} />
+                <Menu isSmall={!isOpened} route={route} setIsOpened={setIsOpened} />
             </div>
         </div>
     )
