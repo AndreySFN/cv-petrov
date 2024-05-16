@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { getNextArrItemByCircle } from '@src/utils';
+import { getNextArrItemByCircle } from '~src/utils';
 
 import './switcher.scss';
 

@@ -1,5 +1,5 @@
 'use client'
-import { TStateSetter } from '@src/types';
+import { TStateSetter } from '~src/types';
 
 import './collapse-btn.scss';
 

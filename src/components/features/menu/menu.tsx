@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 
-import { MenuOption } from '@~components/atoms';
-import { ActivePagesDictionary, PageNames, PagesIconSrcDictionary, PageUrlsDictionary } from '@src/constants';
-import { TStateSetter } from '@src/types';
+import { MenuOption } from '~components/atoms';
+import { ActivePagesDictionary, PageNames, PagesIconSrcDictionary, PageUrlsDictionary } from '~src/constants';
+import { TStateSetter } from '~src/types';
 
 import './menu.scss';
 

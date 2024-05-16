@@ -2,8 +2,8 @@
 import classNames from 'classnames'; 
 import { useState } from 'react'
 
-import { Switcher } from '@~components/atoms'
-import { Languages, languageSwitcherOptions, Themes, themeSwitcherOptions } from '@src/constants'
+import { Switcher } from '~components/atoms'
+import { Languages, languageSwitcherOptions, Themes, themeSwitcherOptions } from '~src/constants'
 
 import './switchers.scss'
 

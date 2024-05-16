@@ -1,8 +1,8 @@
-import { IconedRecord } from '@~components/atoms';
-import { IWorkExpProps } from '@src/types';
-import { getPeriodWithDuration } from '@src/utils';
+import { IconedRecord } from '~components/atoms';
+import { IWorkExpProps } from '~src/types';
+import { getPeriodWithDuration } from '~src/utils';
 
-import '@styles/typography.scss'
+import '~styles/typography.scss'
 import './work-exp-title.scss'
 
 // TODO: Вынести из атомов?

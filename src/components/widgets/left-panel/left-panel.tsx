@@ -2,12 +2,12 @@ import classNames from 'classnames';
 import Image from 'next/image'
 import Link from 'next/link';
 
-import { CollapseBtn } from '@~components/atoms';
-import { Menu , Switchers } from '@~components/features';
-import { TStateSetter } from '@src/types';
+import { CollapseBtn } from '~components/atoms';
+import { Menu , Switchers } from '~components/features';
+import { TStateSetter } from '~src/types';
 
 import './left-panel.scss';
-import '@styles/typography.scss';
+import '~styles/typography.scss';
 
 export interface ILeftPanelProps {
     route: string;

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse, userAgent } from 'next/server';
 
-import { strToBoolean } from '@src/utils';
+import { strToBoolean } from '~src/utils';
 
 const USE_MIDDLEWARE = strToBoolean(process.env.MIDDLEWARE)
 
