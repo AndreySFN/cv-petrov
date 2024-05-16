@@ -1,5 +1,5 @@
-import { IconedRecord, PageHeader } from '@~components/atoms'
-import { CONTACTS } from '@src/constants'
+import { IconedRecord, PageHeader } from '~components/atoms'
+import { CONTACTS } from '~src/constants'
 
 import './contacts.scss'
 

@@ -1,4 +1,4 @@
-import { IWithChildren } from '@src/types';
+import { IWithChildren } from '~src/types';
 
 import './titled-block.scss'
 

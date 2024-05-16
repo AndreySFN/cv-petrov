@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import './iconed-link.scss';
-import '@styles/typography.scss';
+import '~styles/typography.scss';
 
 export interface IIconedRecordProps {
   iconSrc?: string;

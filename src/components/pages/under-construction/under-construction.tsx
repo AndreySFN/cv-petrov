@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import './under-construction.scss'
-import '@styles/typography.scss'
+import '~styles/typography.scss'
 
 export const UnderConstruction = () => {
   return <div className='under-construction'>

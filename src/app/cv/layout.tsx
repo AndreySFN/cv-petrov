@@ -2,8 +2,8 @@ import classNames from 'classnames'; // Importing classNames library
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-import { LeftPanel } from '@~components/widgets';
-import { IWithChildren } from '@src/types';
+import { LeftPanel } from '~components/widgets';
+import { IWithChildren } from '~src/types';
 
 import './layout.scss';
 
