@@ -1,37 +1,40 @@
 'use client'
-import classNames from 'classnames'; 
-import { useState } from 'react'
 
-import { Switcher } from '~components/atoms'
-import { Languages, languageSwitcherOptions, Themes, themeSwitcherOptions } from '~src/constants'
+import classNames from 'classnames';
+import { useState } from 'react';
 
-import './switchers.scss'
+import { Switcher } from '~components/atoms';
+import { Languages, languageSwitcherOptions, Themes, themeSwitcherOptions } from '~src/constants';
+
+import './switchers.scss';
 
 export interface ISwitchersProps {
-    closed?: boolean
+    closed?: boolean;
     className?: string;
 }
 
-export const Switchers = ({ closed = false, className='' }: ISwitchersProps) => {
-  const [language, setLanguage] = useState<Languages>(Languages.EN)
-  const [theme, setTheme] = useState<Themes>(Themes.LIGHT)
+export const Switchers = ({ closed = false, className = '' }: ISwitchersProps) => {
+  const [language, setLanguage] = useState<Languages>(Languages.EN);
+  const [theme, setTheme] = useState<Themes>(Themes.LIGHT);
   
-  const switchersClass = classNames('switchers', { '--closed': closed }, className);
+  const switchersClass = classNames('switchers', { 'switchers__closed': closed }, className);
 
-  return <div className={switchersClass}>
-    <Switcher
-      isShort={closed}
-      isDisabled
-      options={languageSwitcherOptions}
-      activeId={language}
-      onChange={setLanguage}
-    />
-    <Switcher
-      isShort={closed}
-      isDisabled
-      options={themeSwitcherOptions}
-      activeId={theme}
-      onChange={setTheme}
-    />
-  </div>
-}
+  return (
+    <div className={switchersClass}>
+      <Switcher
+        isShort={closed}
+        isDisabled
+        options={languageSwitcherOptions}
+        activeId={language}
+        onChange={setLanguage}
+      />
+      <Switcher
+        isShort={closed}
+        isDisabled
+        options={themeSwitcherOptions}
+        activeId={theme}
+        onChange={setTheme}
+      />
+    </div>
+  );
+};

@@ -1,10 +1,24 @@
+@import '~styles/colors';
+
 .iconed-record {
     display: flex;
     align-items: center;
     font-size: 20px;
     gap: 15px;
+  
     &__icon {
-        height:5rem;
-        width: 5rem;
+      height: 5rem;
+      width: 5rem;
     }
-}
+  
+    &__text {
+      &--bold {
+        font-weight: bold;
+      }
+    }
+  
+    &--blue {
+      color: $LIGHT_BLUE;
+    }
+  }
+  

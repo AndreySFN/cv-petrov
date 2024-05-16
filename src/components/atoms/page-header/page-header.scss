@@ -1,7 +1,17 @@
 @import '~styles/colors';
+
 .page-header {
-    h2 {
-        color: $DARK_BLUE
+  margin-bottom: 4rem;
+
+  &__title {
+    h1 {
+      color: $LIGHT_BLUE;
     }
-    margin-bottom: 4rem;
+  }
+
+  &__subtitle {
+    h2 {
+      color: $LIGHT_BLUE;
+    }
+  }
 }

@@ -1,60 +1,62 @@
 @import '~styles/colors';
 @import '~styles/typography';
 
+$transition-duration: 0.3s;
+
 .menu-option {
-    width: calc(100% + 2.5rem);
-    height: 4.5rem;
-    background-color: $DARK_BLUE;
+  width: calc(100% + 2.5rem);
+  height: 4.5rem;
+  background-color: $DARK_BLUE;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 1rem;
+  transition: background-color $transition-duration ease;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &__link {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: start;
     align-items: center;
-    padding-left: 1rem;
-    transition: background-color 0.3s ease; // TODO: Вынести в переменную
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
 
-    &__link {
-        h2 { // TODO: Разобраться и завести issue цвет отображается корректно в dev
-            color: $WHITE;
-        }
+    h2 {
+      color: $WHITE;
+    }
+  }
 
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
+  &:not(&--disabled):hover {
+    background-color: $DIRTY_BLUE;
+  }
+
+  &--active {
+    background-color: $LIGHTEST_BLUE;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    width: calc(100% + 3rem);
+
+    h2 {
+      padding-left: 2rem;
+    }
+  }
+
+  &--disabled {
+    background-color: $DARK_GRAY;
+    color: $LIGHT_GRAY;
+    cursor: not-allowed;
+  }
+
+  &--short {
+    width: calc(100% + 1rem);
+
+    h2 {
+      padding: 0;
     }
 
-    &:hover {
-        background-color: $DIRTY_BLUE;
+    &--active {
+      width: calc(100% + 1.5rem);
     }
-
-    &.--active {
-        background-color: $LIGHTEST_BLUE;
-        font-size: 3.2rem;
-        font-weight: bolder;
-        width: calc(100% + 3rem);
-
-        h2 {
-            padding-left: 2rem; // TODO: подумать как сделать отступ лучше
-        }
-    }
-
-    &.--disabled {
-        background-color: $DARK_GRAY;
-        color: $LIGHT_GRAY;
-        cursor: not-allowed;
-    }
-
-    &.--short {
-        width: calc(100% + 1rem);
-
-        h2 {
-            padding: 0
-        }
-
-        &.--active {
-            width: calc(100% + 1.5rem)
-        }
-    }
+  }
 }

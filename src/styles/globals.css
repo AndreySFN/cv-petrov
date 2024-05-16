@@ -37,15 +37,18 @@ aside, nav, footer, header, section, main {
 	display: block;
 }
 
+/* TODO Убрать чудо ниже */
 h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit;
-	font-weight: inherit;
+  font-weight: inherit; 
+}
+
+h1 {
+  font-weight: bold;
 }
 
 ul, ol {
   list-style-position: inside;
 }
-
 
 img {
 	vertical-align: top;
@@ -112,7 +115,6 @@ body {
 }
 
 *, *::before, *::after {
-
   box-sizing: border-box;
   box-sizing: inherit;
 }

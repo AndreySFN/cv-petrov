@@ -16,6 +16,7 @@
   "rules": {
     "indent": ["warn", 2],
     "spaced-comment": ["warn", "always"],
+    "comma-spacing": ["warn", { "before": false, "after": true }],
     "import/order": "off",
     "max-len": ["warn", { "code": 140 }],
     "quotes": ["warn", "single"],
@@ -37,7 +38,11 @@
     "react/jsx-max-props-per-line": ["warn", { "maximum": 1, "when": "multiline" }],
     "react/jsx-first-prop-new-line": ["warn", "multiline"],
     "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
-    "react/jsx-tag-spacing": ["warn", { "beforeSelfClosing": "always" }]
+    "react/jsx-tag-spacing": ["warn", { "beforeSelfClosing": "always" }],
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "directive", "next": "*" }
+    ]
   },
   "settings": {
     "react": {

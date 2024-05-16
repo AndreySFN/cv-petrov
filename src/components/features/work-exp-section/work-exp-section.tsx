@@ -1,3 +1,5 @@
+'use client'
+
 import classNames from 'classnames';
 import { useState } from 'react';
 
@@ -11,13 +13,13 @@ export interface IWorkExpSectionProps {
     projectDescription?: string;
     mainStack?: string;
     duties?: Array<string>;
-    achivments?: Array<string>;
+    achievements?: Array<string>;
 }
 
-export const WorkExpSection = ({ titleProps, projectDescription, achivments, duties, mainStack }: IWorkExpSectionProps) => {
+export const WorkExpSection = ({ titleProps, projectDescription, achievements, duties, mainStack }: IWorkExpSectionProps) => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   
-  const contentClass = classNames('work-exp-section__content', { '--closed': !isOpened });
+  const contentClass = classNames('work-exp-section__content', { 'work-exp-section__content--closed': !isOpened });
 
   return (
     <div className='work-exp-section'>
@@ -25,28 +27,34 @@ export const WorkExpSection = ({ titleProps, projectDescription, achivments, dut
         <div className='work-exp-section__header__title'>
           <WorkExpTitle {...titleProps} />
         </div>
-        <div className='work-exp-section__header__collapse-btn'>
-          <CollapseBtn direction='up-down' isOpen={isOpened} setIsOpen={setIsOpened} />
+        <div>
+          <CollapseBtn direction='up-down' className='work-exp-section__collapse-btn' isOpen={isOpened} setIsOpen={setIsOpened} />
         </div>
       </div>
       <div className={contentClass}>
-        {projectDescription && <TitledBlock title='Project description:'>
-          {projectDescription}
-        </TitledBlock>}
-        {mainStack && <TitledBlock title='Main stack:'>
-          {mainStack}
-        </TitledBlock>}
-        <div className='work-exp-section__content__duties-and-achivments'>
-          {duties &&
+        {projectDescription && (
+          <TitledBlock title='Project description:'>
+            {projectDescription}
+          </TitledBlock>
+        )}
+        {mainStack && (
+          <TitledBlock title='Main stack:'>
+            {mainStack}
+          </TitledBlock>
+        )}
+        <div className='work-exp-section__content__duties-and-achievements'>
+          {duties && (
             <TitledBlock title='Duties:'>
               <List items={duties} />
-            </TitledBlock>}
-          {achivments &&
+            </TitledBlock>
+          )}
+          {achievements && (
             <TitledBlock title='Achievements:'>
-              <List items={achivments} />
-            </TitledBlock>}
+              <List items={achievements} />
+            </TitledBlock>
+          )}
         </div>
       </div>
     </div>
   );
-}
+};

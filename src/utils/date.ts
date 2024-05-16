@@ -1,3 +1,4 @@
+// TODO: Кандидат на рефакторинг
 import { START_DATE } from '~src/constants';
 
 function formatDate(date: Date): string {

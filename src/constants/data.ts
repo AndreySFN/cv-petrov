@@ -24,7 +24,7 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
       'Continuous interaction with various teams',
       'Participation in adaptation and implementation of Agile methodologies'
     ],
-    achivments: [
+    achievements: [
       'Implemented Storybook throughout the project (where appropriate)',
       'Gained experience with working on and installing Linux (Ubuntu, Kubuntu)'
     ]
@@ -48,7 +48,7 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
       'Conducting demonstrations',
       'Participation in planning and other agile ceremonies'
     ],
-    achivments: [
+    achievements: [
       'Developed an authentication project from scratch using Keycloak',
       'Convinced the team to abandon the unnecessary use of Storybook, which increased development speed',
       'Temporarily performed team lead duties in their absence'
@@ -92,7 +92,7 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
       'Interaction with adjacent teams, raising change requests',
       'Backend for frontend enhancements'
     ],
-    achivments: [
+    achievements: [
       'Introduced the product into industrial operation in collaboration with the team',
       'Convinced management of the impracticality of supporting IE 11'
     ]

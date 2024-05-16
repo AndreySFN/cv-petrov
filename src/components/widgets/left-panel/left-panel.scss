@@ -1,138 +1,164 @@
 @import '~styles/colors';
 @import '~styles/breakpoints.scss';
 
-.left_panel {
-    min-width: 30rem;
-    transition: min-width 0.5s ease;
-    z-index: 2;
+.wrapper {
+  display: flex;
+  transition: margin-left 0.5s ease;
 
-    @media(max-width: $EXTRA_SMALL) {
-        position: absolute;
+  &.panel-closed {
+    margin-left: 5rem;
+
+    @media (max-width: $EXTRA_LARGE) {
+      margin-left: 50px;
     }
-
-    &.--closed {
-        min-width: 5rem;
-    }
-
-    &__download-btn {
-        display: flex;
-        justify-content: flex-end;
-        padding: 0 1rem 2rem 0;
-        &.--closed {
-            padding: 0.2rem;
-            padding-bottom: 2rem;
-            justify-content: center;
-        }
-    }
-
-    &__content {
-        min-height: 100%;
-        background-color: $LIGHT_BLUE;
-        width: 30rem; // Исходная ширина
-        padding: 1rem;
-        transition: width 0.5s ease; // Анимация изменения ширины
-        z-index: 1;
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        &.--closed {
-            width: 5rem; // Суженная ширина при добавлении класса --closed
-            padding: 0;
-        }
-
-        &__avatar {
-            width: 100%;
-            transition: width 0.5s ease, height 0.5s ease;
-
-            &.--closed {
-                width: 0px;
-            }
-
-            img {
-                padding: 1rem;
-                border-radius: 100%;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        &__name-container {
-            padding: 0 0 2rem 0;
-            width: 100%;
-            text-align: center;
-            overflow: hidden;
-            // Анимация изменения ширины, высоты и размера шрифта
-            transition: width 0.5s ease, height 0.3s ease;
-
-            &.--closed {
-                width: 0px;
-                height: 0px;
-            }
-
-            h2 {
-                transition: font-size 0.2s ease;
-            }
-
-            &.--closed h2 {
-                font-size: 0px;
-            }
-        }
-
-        &.settings {
-            transition: flex-direction 0.5s ease, padding 0.5s ease, gap 0.5s, ease; // Анимация изменения направления flex-контейнера
-        }
-    }
+  }
 }
 
-.left-panel__collapse {
+.left-panel {
+  transition: min-width 0.5s ease, width 0.5s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+  height: 100%;
+
+  @media (max-width: $EXTRA_SMALL) {
+    position: fixed;
+  }
+
+  &--closed {
+    min-width: 5rem;
+
+    @media (max-width: $EXTRA_LARGE) {
+      min-width: 50px;
+    }
+  }
+
+  &__download-btn {
+    height: 6rem;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem 2rem 0;
+
+    &--closed {
+      padding: 0.2rem;
+      padding-bottom: 2rem;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    min-height: 100%;
+    background-color: $LIGHT_BLUE;
+    width: 30rem;
+    padding: 1rem;
+    transition: width 0.5s ease;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--closed {
+      width: 5rem;
+      padding: 0;
+
+      @media (max-width: $EXTRA_LARGE) {
+        width: 50px;
+      }
+    }
+
+    &__avatar {
+      width: 100%;
+      transition: width 0.5s ease, height 0.5s ease;
+
+      &--closed {
+        width: 0;
+      }
+
+      img {
+        padding: 1rem;
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__name-container {
+      padding: 0 0 2rem 0;
+      width: 100%;
+      text-align: center;
+      overflow: hidden;
+      transition: width 0.5s ease, height 0.3s ease;
+
+      &--closed {
+        width: 0;
+        height: 0;
+      }
+
+      h2 {
+        transition: font-size 0.2s ease;
+      }
+
+      &--closed h2 {
+        font-size: 0;
+      }
+    }
+
+    &__settings {
+      transition: flex-direction 0.5s ease, padding 0.5s ease, gap 0.5s ease;
+    }
+  }
+
+  &__collapse {
     position: absolute;
     left: 275px;
 
-    &.--closed {
-        left: 2rem;
-        top: -1rem;
-        position: relative;
+    @media (max-width: $EXTRA_LARGE) {
+      left: 185px;
     }
 
-    @media(max-width: $EXTRA_LARGE) {
-        left: 175px;
-    }
-}
+    &--closed {
+      left: 2rem;
+      top: -1rem;
+      position: relative;
 
-.left_panel {
-    @media(max-width: $EXTRA_LARGE) {
-        min-width: 200px;
-        width: 200px;
-        &.--closed {
-            min-width: 50px;
-            width: 50px;
-        }
+      @media (max-width: $EXTRA_LARGE) {
+        left: 15px;
+      }
+    }
+  }
+
+  @media (max-width: $EXTRA_LARGE) {
+    min-width: 200px;
+    width: 200px;
+
+    &--closed {
+      min-width: 50px;
+      width: 50px;
     }
 
     &__content {
-        @media(max-width: $EXTRA_LARGE) {
-            width: 200px;
-        }
-    }
+      width: 200px;
 
-    &__switchers {
-        @media(max-width: $EXTRA_LARGE) {
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
+      &--closed {
+        width: 5rem;
+      }
     }
 
     .collapse-btn {
-        @media(max-width: $EXTRA_LARGE) {
-            height: 40px;
-            width: 40px;
-        }
+      height: 40px;
+      width: 40px;
 
-        @media(max-width: $SMALL) {
-            height: 30px;
-            width: 30px;
-        }
+      @media (max-width: $SMALL) {
+        height: 30px;
+        width: 30px;
+      }
     }
+  }
+}
+
+.content {
+  flex-grow: 1;
+  transition: margin-left 0.5s ease;
 }

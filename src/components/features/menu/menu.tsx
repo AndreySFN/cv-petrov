@@ -1,20 +1,22 @@
 import classNames from 'classnames';
+import React from 'react';
 
 import { MenuOption } from '~components/atoms';
 import { ActivePagesDictionary, PageNames, PagesIconSrcDictionary, PageUrlsDictionary } from '~src/constants';
 import { TStateSetter } from '~src/types';
+import { optionalCallback } from '~src/utils';
 
 import './menu.scss';
 
 export interface IMenuProps {
-    route: string;
-    isSmall?: boolean;
-    setIsOpened: TStateSetter<boolean>;
+  route: string;
+  isSmall?: boolean;
+  setIsOpened?: TStateSetter<boolean>;
 }
 
-export const Menu = ({ route: page, isSmall, setIsOpened }: IMenuProps) => {
+export const Menu: React.FC<IMenuProps> = ({ route: page, isSmall, setIsOpened }) => {
   const menuClasses = classNames('menu', {
-    '--short': isSmall
+    'menu--short': isSmall,
   });
 
   return (
@@ -27,7 +29,7 @@ export const Menu = ({ route: page, isSmall, setIsOpened }: IMenuProps) => {
           isSmall={isSmall}
           smallTitle={PagesIconSrcDictionary[name]}
           href={PageUrlsDictionary[name]}
-          onClick={() => setIsOpened(false)}
+          onClick={optionalCallback(setIsOpened)}
           isActive={page === PageUrlsDictionary[name]}
         />
       ))}
