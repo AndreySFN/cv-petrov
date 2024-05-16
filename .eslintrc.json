@@ -1,3 +1,47 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals"
+  ],
+  "ignorePatterns": [
+    "node_modules",
+    ".next"
+  ],
+  "plugins": [
+    "import",
+    "simple-import-sort",
+    "unused-imports",
+    "jsx-a11y",
+    "react"
+  ],
+  "rules": {
+    "indent": ["warn", 2],
+    "spaced-comment": ["warn", "always"],
+    "import/order": "off",
+    "max-len": ["warn", { "code": 140 }],
+    "quotes": ["warn", "single"],
+    "object-curly-spacing": ["warn", "always"],
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "unused-imports/no-unused-imports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          ["^[a-zA-Z]"],
+          ["^@"],
+          ["^"]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "warn",
+    "import/no-duplicates": "warn",
+    "react/jsx-max-props-per-line": ["warn", { "maximum": 1, "when": "multiline" }],
+    "react/jsx-first-prop-new-line": ["warn", "multiline"],
+    "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
+    "react/jsx-tag-spacing": ["warn", { "beforeSelfClosing": "always" }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

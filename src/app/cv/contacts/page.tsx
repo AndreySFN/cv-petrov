@@ -1,5 +1,5 @@
-import { Contacts } from "@/components/pages";
+import { Contacts } from '@components/pages';
 
 export default function ContactsRoute() {
-    return <Contacts/>
+  return <Contacts />
 }

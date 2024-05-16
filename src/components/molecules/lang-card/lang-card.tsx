@@ -1,6 +1,7 @@
-import { IconedRecord } from '@/components/atoms'
+import { IconedRecord } from '@components/atoms'
+import { LANG_LEVEL } from '@src/constants';
+
 import './lang-card.scss'
-import { LANG_LEVEL } from '@/constants';
 
 export interface ILangCardProps {
     lang: string;
@@ -8,9 +9,9 @@ export interface ILangCardProps {
     langLvl: LANG_LEVEL
 }
 
-export const LangCard = ({lang, langLvl, iconSrc}: ILangCardProps) => {
-    return <div>
-        <IconedRecord iconSrc={iconSrc} text={lang} bold/>
-        <h4>{langLvl}</h4>
-    </div>
+export const LangCard = ({ lang, langLvl, iconSrc }: ILangCardProps) => {
+  return <div>
+    <IconedRecord iconSrc={iconSrc} text={lang} bold />
+    <h4>{langLvl}</h4>
+  </div>
 }
