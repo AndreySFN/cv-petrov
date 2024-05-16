@@ -1,5 +1,5 @@
-import { Overview } from "@/components/pages";
+import { Overview } from '@components/pages';
 
 export default function AboutMe() {
-    return <Overview/>
+  return <Overview />
 }

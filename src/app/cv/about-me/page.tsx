@@ -1,5 +1,5 @@
-import { UnderConstruction } from "@/components/pages";
+import { UnderConstruction } from '@components/pages';
 
 export default function AboutMe() {
-    return <UnderConstruction/>
+  return <UnderConstruction />
 }

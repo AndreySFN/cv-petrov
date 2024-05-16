@@ -9,24 +9,23 @@ export enum PageNames {
 }
 
 export const PagesIconSrcDictionary = {
-    [PageNames.OVERVIEW]: '👀',
-    [PageNames.WORK_EXPERIENCE]: '🛠',
-    [PageNames.PORTFOLIO]: '💼',
-    [PageNames.SKILLS_AND_LANGUAGES]: '📃',
-    [PageNames.ABOUT_ME]: '👨🏻‍💻',
-    [PageNames.EDUCATION]: '🎓',
-    [PageNames.CONTACTS]: '📓'
+  [PageNames.OVERVIEW]: '👀',
+  [PageNames.WORK_EXPERIENCE]: '🛠',
+  [PageNames.PORTFOLIO]: '💼',
+  [PageNames.SKILLS_AND_LANGUAGES]: '📃',
+  [PageNames.ABOUT_ME]: '👨🏻‍💻',
+  [PageNames.EDUCATION]: '🎓',
+  [PageNames.CONTACTS]: '📓'
 }
 
 export const PageUrlsDictionary = {
-    [PageNames.OVERVIEW]: '/cv/overview', //TODO: Убрать костыл
-    [PageNames.WORK_EXPERIENCE]: '/cv/work-experience',
-    [PageNames.PORTFOLIO]: '/cv/portfolio',
-    [PageNames.SKILLS_AND_LANGUAGES]: '/cv/skills-and-languages',
-    [PageNames.ABOUT_ME]: '/cv/about-me',
-    [PageNames.EDUCATION]: '/cv/education',
-    [PageNames.CONTACTS]: '/cv/contacts'
+  [PageNames.OVERVIEW]: '/cv/overview', // TODO: Убрать костыл
+  [PageNames.WORK_EXPERIENCE]: '/cv/work-experience',
+  [PageNames.PORTFOLIO]: '/cv/portfolio',
+  [PageNames.SKILLS_AND_LANGUAGES]: '/cv/skills-and-languages',
+  [PageNames.ABOUT_ME]: '/cv/about-me',
+  [PageNames.EDUCATION]: '/cv/education',
+  [PageNames.CONTACTS]: '/cv/contacts'
 }
-
 
 export const ActivePagesDictionary = new Set([PageNames.WORK_EXPERIENCE, PageNames.CONTACTS, PageNames.OVERVIEW])

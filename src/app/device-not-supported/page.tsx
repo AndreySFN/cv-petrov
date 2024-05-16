@@ -1,5 +1,5 @@
-import { DeviceNotSupported } from "@/components/pages/device-not-supported/device-not-supported";
+import { DeviceNotSupported } from '@components/pages';
 
 export default function DeviceNotSupportedPage() {
-    return <DeviceNotSupported/>
+  return <DeviceNotSupported />
 }

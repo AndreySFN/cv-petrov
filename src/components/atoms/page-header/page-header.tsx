@@ -1,5 +1,5 @@
 import './page-header.scss';
-import '../../../styles/typography.scss'
+import '@styles/typography.scss'
 
 export interface IPageHeaderProps {
     title: string;
@@ -7,12 +7,12 @@ export interface IPageHeaderProps {
 }
 
 export const PageHeader = ({ title, subtitle }: IPageHeaderProps) => {
-    return <div className="page-header">
-        <div className="page-header__title">
-            <h1>{title}</h1>
-        </div>
-        <div className="page-header__subtitle">
-            <h2>{subtitle}</h2>
-        </div>
+  return <div className="page-header">
+    <div className="page-header__title">
+      <h1>{title}</h1>
     </div>
+    <div className="page-header__subtitle">
+      <h2>{subtitle}</h2>
+    </div>
+  </div>
 }
