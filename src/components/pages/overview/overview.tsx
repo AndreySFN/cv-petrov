@@ -1,5 +1,5 @@
-import { IconedRecord, PageHeader, TitledBlock } from '@components/atoms'
-import { LangCard, WorkExpCard } from '@components/molecules'
+import { IconedRecord, PageHeader, TitledBlock } from '@~components/atoms'
+import { LangCard, WorkExpCard } from '@~components/molecules'
 import { CONTACTS, LANGUAGES, POSITION, WORK_EXPERIENCE } from '@src/constants'
 import { IWithChildren } from '@src/types'
 import { getExperiencePeriod } from '@src/utils'

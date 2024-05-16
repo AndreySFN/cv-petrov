@@ -1,4 +1,4 @@
-import { IconedRecord } from '@components/atoms';
+import { IconedRecord } from '@~components/atoms';
 import { IWorkExpProps } from '@src/types';
 import { getPeriodWithDuration } from '@src/utils';
 

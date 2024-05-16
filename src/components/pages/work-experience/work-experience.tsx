@@ -1,5 +1,5 @@
-import { PageHeader } from '@components/atoms'
-import { WorkExpSection } from '@components/features'
+import { PageHeader } from '@~components/atoms'
+import { WorkExpSection } from '@~components/features'
 import { WORK_EXPERIENCE } from '@src/constants'
 import { getExperiencePeriod } from '@src/utils'
 

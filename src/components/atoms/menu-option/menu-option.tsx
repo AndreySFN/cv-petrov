@@ -1,33 +1,37 @@
+import classNames from 'classnames';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import './menu-option.scss';
 
 export interface IMenuOptionProps {
-    title: ReactNode;
-    onClick?: VoidFunction;
-    isActive?: boolean;
-    isDisabled?: boolean;
-    isSmall?: boolean;
-    smallTitle: ReactNode;
-    href: string;
+  title: ReactNode;
+  onClick?: VoidFunction;
+  isActive?: boolean;
+  isDisabled?: boolean;
+  isSmall?: boolean;
+  smallTitle: ReactNode;
+  href: string;
 }
 
 export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisabled, onClick }: IMenuOptionProps) => {
+  const menuOptionClasses = classNames('menu-option', {
+    '--active': isActive,
+    '--disabled': isDisabled,
+    '--short': isSmall
+  });
 
-  // TODO: Подумать над рефакторингом
-  const Title = () => <h2>{!isSmall ? title : smallTitle}</h2>
+  const Title = () => <h2>{!isSmall ? title : smallTitle}</h2>;
 
   return (
-    <div
-      onClick={() => onClick && onClick()}
-      className={`menu-option ${isActive && '--active'} ${isDisabled && '--disabled'} ${isSmall && '--short'}`}
-    >
-      {isDisabled ?
-        <Title /> :
+    <div onClick={() => onClick && onClick()} className={menuOptionClasses}>
+      {isDisabled ? (
+        <Title />
+      ) : (
         <Link href={href} className='menu-option__link'>
           <Title />
-        </Link>}
+        </Link>
+      )}
     </div>
-  )
-}
+  );
+};

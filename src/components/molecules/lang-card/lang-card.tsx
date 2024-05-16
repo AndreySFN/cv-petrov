@@ -1,4 +1,4 @@
-import { IconedRecord } from '@components/atoms'
+import { IconedRecord } from '@~components/atoms'
 import { LANG_LEVEL } from '@src/constants';
 
 import './lang-card.scss'
