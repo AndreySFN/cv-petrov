@@ -8,7 +8,8 @@
     "build": "rm -rf .next && next build",
     "build:start": "rm -rf .next && next build && yarn start",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
   },
   "dependencies": {
     "eslint-plugin-simple-import-sort": "^12.1.0",
@@ -21,6 +22,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "classnames": "^2.5.1",
     "eslint": "^8",
     "eslint-config-next": "^14.2.3",
     "eslint-plugin-import": "^2.29.1",

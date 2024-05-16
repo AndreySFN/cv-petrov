@@ -1,21 +1,27 @@
 'use client'
 import { TStateSetter } from '@src/types';
 
-import './collapse-btn.scss'
+import './collapse-btn.scss';
 
 export type TCollapseBtnDirection = 'up-down' | 'left-right';
 
 export interface ICollapseBtnProps {
-    isOpen: boolean;
-    setIsOpen: TStateSetter<boolean>;
-direction?: TCollapseBtnDirection;
-    className?: string;
+  isOpen: boolean;
+  setIsOpen: TStateSetter<boolean>;
+  direction?: TCollapseBtnDirection;
+  className?: string;
 }
 
 export const CollapseBtn = ({ isOpen, setIsOpen, direction, className }: ICollapseBtnProps) => {
-  return <div
-    className={`collapse-btn ${!isOpen && '--closed'} ${direction === 'up-down' && '--up-down'}`
-      .concat(className ? ` ${className}` : '')}
-    onClick={() => setIsOpen(!isOpen)}
-  />
-}
+  const baseClass = 'collapse-btn__button';
+  const closedClass = !isOpen ? `${baseClass}--closed` : '';
+  const directionClass = direction === 'up-down' ? `${baseClass}--up-down` : '';
+  const additionalClasses = className ? ` ${className}` : '';
+
+  return (
+    <div
+      className={`${baseClass} ${closedClass} ${directionClass}${additionalClasses}`}
+      onClick={() => setIsOpen(!isOpen)}
+    />
+  );
+};

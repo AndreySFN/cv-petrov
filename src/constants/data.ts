@@ -1,6 +1,6 @@
-import { IIconedRecordProps } from '@components/atoms'
-import { IWorkExpSectionProps } from '@components/features'
-import { ILangCardProps } from '@components/molecules'
+import { IIconedRecordProps } from '@~components/atoms'
+import { IWorkExpSectionProps } from '@~components/features'
+import { ILangCardProps } from '@~components/molecules'
 
 import { LANG_LEVEL } from './lang-levels'
 

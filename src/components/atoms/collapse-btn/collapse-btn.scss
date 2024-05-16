@@ -1,11 +1,11 @@
 @import '@styles/colors';
 
 .collapse-btn {
+  &__button {
     border-radius: 100%;
     width: 5rem;
     height: 5rem;
     background-color: $DARK_BLUE;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,25 +14,26 @@
     cursor: pointer;
 
     &:hover {
-        background-color: $DIRTY_BLUE;
+      background-color: $DIRTY_BLUE;
     }
 
     &::before {
-        width: 70%;
-        height: 70%;
-        content: '';
-        background-image: url('/icons/angle-left.png'); // Путь к изображению
-        background-size: contain;
-        color: $WHITE;
-        display: block;
-        transition: transform 0.5s ease; // Плавное изменение трансформации
+      width: 70%;
+      height: 70%;
+      content: '';
+      background-image: url('/icons/angle-left.png'); // Путь к изображению
+      background-size: contain;
+      color: $WHITE;
+      display: block;
+      transition: transform 0.5s ease; // Плавное изменение трансформации
     }
 
-    &.--closed::before {
-        transform: scaleX(-1); // Отражение содержимого по горизонтали
+    &--closed::before {
+      transform: scaleX(-1); // Отражение содержимого по горизонтали
     }
 
-    &.--up-down {
-        rotate: 90deg;
+    &--up-down {
+      rotate: 90deg;
     }
+  }
 }
