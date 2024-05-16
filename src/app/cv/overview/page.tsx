@@ -1,5 +1,5 @@
 import { Overview } from '~components/pages';
 
-export default function AboutMe() {
+export default function OverviewRoute() {
   return <Overview />
 }

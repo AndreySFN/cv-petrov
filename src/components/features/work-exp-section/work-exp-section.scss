@@ -1,36 +1,42 @@
+@import '~styles/breakpoints';
+
 .work-exp-section {
     width: 100%;
-    .collapse-btn {
+
+    &__collapse-btn {
         height: 30px;
         width: 30px;
     }
+
     &__header {
         display: flex;
-        width:100%;
+        width: 100%;
         overflow: hidden;
         align-items: center;
         
         &__title {
             flex-grow: 1;
-            text-wrap: nowrap;
+            white-space: nowrap;
         }
     }
 
     &__content {
         padding: 0 3rem;
-        overflow: hidden; // Скрывает содержимое, выходящее за пределы элемента
-        max-height: auto; // Начальная максимальная высота, достаточно большая, чтобы вместить содержимое
-        &.--closed {
-            max-height: 0; // При добавлении класса .--closed устанавливаем максимальную высоту в 0, что сворачивает элемент
+        overflow: hidden;
+        max-height: auto;
+
+        &--closed {
+            max-height: 0;
         }
 
-        &__duties-and-achivments{
+        &__duties-and-achievements {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            &> *{
+
+            & > * { // TODO: сомнительно, но пока окэй
                 min-width: 15rem;
-                text-wrap: pretty;
+                word-wrap: break-word;
             }
         }
     }

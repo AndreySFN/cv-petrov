@@ -16,6 +16,7 @@
   "rules": {
     "indent": ["warn", 2],
     "spaced-comment": ["warn", "always"],
+    "comma-spacing": ["warn", { "before": false, "after": true }],
     "import/order": "off",
     "max-len": ["warn", { "code": 140 }],
     "quotes": ["warn", "single"],

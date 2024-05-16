@@ -1,5 +1,5 @@
 import { WorkExperience } from '~components/pages';
 
-export default function WorkExperiencePage() {
+export default function WorkExperienceRoute() {
   return <WorkExperience />
 }

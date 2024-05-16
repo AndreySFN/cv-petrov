@@ -1,5 +1,5 @@
 import { UnderConstruction } from '~components/pages';
 
-export default function AboutMe() {
+export default function PortfolioRoute() {
   return <UnderConstruction />
 }

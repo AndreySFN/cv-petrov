@@ -16,9 +16,9 @@ export interface IMenuOptionProps {
 
 export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisabled, onClick }: IMenuOptionProps) => {
   const menuOptionClasses = classNames('menu-option', {
-    '--active': isActive,
-    '--disabled': isDisabled,
-    '--short': isSmall
+    'menu-option--active': isActive,
+    'menu-option--disabled': isDisabled,
+    'menu-option--short': isSmall
   });
 
   const Title = () => <h2>{!isSmall ? title : smallTitle}</h2>;

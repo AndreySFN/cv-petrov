@@ -14,17 +14,17 @@ export interface IIconedRecordProps {
 
 export const IconedRecord = ({ href, iconSrc, text, bold = false }: IIconedRecordProps) => {
   const iconedRecordClasses = classNames('iconed-record', {
-    '--blue': true, // Always apply the blue color class
-    '--bold': bold // Apply the bold class conditionally based on the prop
+    'iconed-record--blue': true, // Применение класса с модификатором цвета
+    'iconed-record__text--bold': bold // Применение класса с модификатором текста
   });
 
   const Content = () => (
     <div className={iconedRecordClasses}>
-      <div className='iconed-record__icon'>
+      <div className="iconed-record__icon">
         {iconSrc && <Image src={iconSrc} alt={text} height={50} width={50} />}
       </div>
-      <div className='iconed-record__text'>
-        <h2 className={bold ? '--bold' : ''}>{text}</h2>
+      <div className="iconed-record__text">
+        <h2 className={bold ? 'iconed-record__text--bold' : ''}>{text}</h2>
       </div>
     </div>
   );

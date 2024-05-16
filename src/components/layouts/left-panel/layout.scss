@@ -1,31 +1,25 @@
-@import '@styles/colors';
-@import '@styles/breakpoints.scss';
+@import '~styles/colors';
+@import '~styles/breakpoints.scss';
 
 .container {
   display: flex;
   width: 100%;
-  min-height: 100%;
-  max-height: 100%;
+  min-height: 100vh;
   height: 1px;
 
   &__content {
     background-color: $WHITE;
     flex: 1;
-    padding: 2rem;
-    padding-left: 3rem;
+    padding: 4rem;
     z-index: 0;
-    min-height: 100%;
-    max-height: 100%;
     transition: width 0.5s ease;
     overflow: auto;
-
+    @media(max-width: $EXTRA_SMALL){
+     padding-left: 50px;
+    }
     &--frozen {
       pointer-events: none;
       overflow: hidden;
-    }
-
-    @media(max-width: $SMALL) {
-      padding-left: 50px;
     }
   }
 
@@ -42,7 +36,7 @@
       opacity: 0;
     }
 
-    @media(min-width: $SMALL) {
+    @media(min-width: $EXTRA_SMALL) {
       display: none;
     }
   }

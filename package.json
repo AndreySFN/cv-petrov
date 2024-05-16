@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:middleware": "MIDDLEWARE=true next dev",
-    "build": "rm -rf .next && next build",
-    "build:start": "rm -rf .next && next build && yarn start",
+    "build": "rm -rf .next && yarn lint:fix && next build",
+    "build:start": "yarn build && yarn start",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix"
