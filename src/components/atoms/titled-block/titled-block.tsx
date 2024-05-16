@@ -1,10 +1,8 @@
 import React from 'react';
 
-import './titled-block.scss';
+import { IWithChildren } from '~src/types';
 
-export interface IWithChildren { // TODO: А как оно тут оказалось?
-  children?: React.ReactNode;
-}
+import './titled-block.scss';
 
 export interface ITitledBlockProps extends IWithChildren {
   title: string;

@@ -38,7 +38,11 @@
     "react/jsx-max-props-per-line": ["warn", { "maximum": 1, "when": "multiline" }],
     "react/jsx-first-prop-new-line": ["warn", "multiline"],
     "react/jsx-closing-bracket-location": ["warn", "line-aligned"],
-    "react/jsx-tag-spacing": ["warn", { "beforeSelfClosing": "always" }]
+    "react/jsx-tag-spacing": ["warn", { "beforeSelfClosing": "always" }],
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "directive", "next": "*" }
+    ]
   },
   "settings": {
     "react": {

@@ -23,7 +23,7 @@ $transition-duration: 0.3s;
     align-items: center;
 
     h2 {
-      color: $WHITE; // TODO: Разобраться и завести issue цвет отображается корректно в dev
+      color: $WHITE;
     }
   }
 
@@ -38,7 +38,7 @@ $transition-duration: 0.3s;
     width: calc(100% + 3rem);
 
     h2 {
-      padding-left: 2rem; // TODO: подумать как сделать отступ лучше
+      padding-left: 2rem;
     }
   }
 

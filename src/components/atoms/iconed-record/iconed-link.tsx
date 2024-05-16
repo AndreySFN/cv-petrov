@@ -14,8 +14,8 @@ export interface IIconedRecordProps {
 
 export const IconedRecord = ({ href, iconSrc, text, bold = false }: IIconedRecordProps) => {
   const iconedRecordClasses = classNames('iconed-record', {
-    'iconed-record--blue': true, // Применение класса с модификатором цвета
-    'iconed-record__text--bold': bold // Применение класса с модификатором текста
+    'iconed-record--blue': true,
+    'iconed-record__text--bold': bold
   });
 
   const Content = () => (

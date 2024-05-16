@@ -19,7 +19,7 @@ export const PagesIconSrcDictionary = {
 }
 
 export const PageUrlsDictionary = {
-  [PageNames.OVERVIEW]: '/cv/overview', // TODO: Убрать костыл
+  [PageNames.OVERVIEW]: '/cv/overview', // TODO: Убрать костыль (ну или не костыль, пока не понял)
   [PageNames.WORK_EXPERIENCE]: '/cv/work-experience',
   [PageNames.PORTFOLIO]: '/cv/portfolio',
   [PageNames.SKILLS_AND_LANGUAGES]: '/cv/skills-and-languages',

@@ -92,7 +92,7 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
       'Interaction with adjacent teams, raising change requests',
       'Backend for frontend enhancements'
     ],
-    achievements: [ // TODO: Yes, I'm from England
+    achievements: [
       'Introduced the product into industrial operation in collaboration with the team',
       'Convinced management of the impracticality of supporting IE 11'
     ]

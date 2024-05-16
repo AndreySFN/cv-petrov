@@ -1,4 +1,5 @@
 'use client'
+
 import classNames from 'classnames';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -23,7 +24,7 @@ export const LeftPanelLayout = ({ children }: IWithChildren) => {
   return (
     <div className="container">
       <LeftPanel isOpened={isOpened} route={route} setIsOpened={setIsOpened} />
-      <DelayedUnmount delay={HALF_SECOND} shouldRender={isOpened}>
+      <DelayedUnmount delay={HALF_SECOND} shouldRender={isOpened}> {/* TODO: Разобраться с гидратацие */}
         <div className={containerOverlayClass} onClick={handleBtnClick} />
       </DelayedUnmount>
       <div className={containerContentClass}>
