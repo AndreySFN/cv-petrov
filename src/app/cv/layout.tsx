@@ -15,7 +15,7 @@ export default function RootLayout({ children }: IWithChildren) {
   return (
     <div className="container">
       <LeftPanel isOpened={isOpened} route={route} setIsOpened={setIsOpened} />
-      <div className={`container__wrapper ${!isOpened && '--hidden'}`} onClick={handleBtnClick} about='sdsad' accessKey='asdasd' />
+      <div className={`container__wrapper ${!isOpened && '--hidden'}`} onClick={handleBtnClick} />
       <div className='container__content'>
         {children}
       </div>
