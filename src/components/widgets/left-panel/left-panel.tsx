@@ -3,6 +3,8 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 import { CollapseBtn } from '~components/atoms';
 import { Menu, Switchers } from '~components/features';
@@ -31,9 +33,23 @@ export const LeftPanel: React.FC<ILeftPanelProps> = ({ isOpened, route, setIsOpe
   const downloadBtnClass = classNames('left-panel__download-btn', { 'left-panel__download-btn--closed': !isOpened });
   const collapseClass = classNames('left-panel__collapse', { 'left-panel__collapse--closed': !isOpened });
   const isMobile = useMobile()
+
+  const ref = useRef<HTMLDivElement>(null)
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setIsOpened(false),
+    onSwipedRight: () => setIsOpened(true),
+  });
+
+  useEffect(() => {
+    if(!isOpened){
+      ref?.current?.scrollTo(0, 0)
+    }
+  }, [isOpened])
+
   return (
-    <div className={panelClass}>
-      <div className={contentClass}>
+    <div className={panelClass} ref={ref}>
+      <div {...handlers} className={contentClass}>
         <div>
           <div className={avatarClass}>
             {/* eslint-disable-next-line */}
