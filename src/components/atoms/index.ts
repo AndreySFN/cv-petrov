@@ -1,4 +1,4 @@
-export * from '../molecules/work-exp/work-exp-title'
+export * from '../molecules/work-exp-title'
 export * from './collapse-btn'
 export * from './iconed-record'
 export * from './list'

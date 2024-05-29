@@ -1,92 +1,13 @@
-#  [RU] Вебсайт личного резюме
+# Personal CV Website
 
-## Описание проекта (к чему стремимся):
+At the moment, the project requires some corrections and numerous improvements, as it is at the stage of a minimally viable product.
 
-Этот проект представляет собой интерактивное веб-приложение, созданное с использованием React и Next.js, предназначенное для демонстрации моего профессионального резюме. Веб-сайт включает детальную информацию обо мне, моем опыте работы, портфолио проектов, а также контактной информации. Приложение поддерживает мультиязычность (русский и английский) и предоставляет возможность переключения между светлой и тёмной темами.
+Currently, at least the following improvements have been accounted for:
+  - Install a loader when switching between pages.
+  - Implement a solution to control the state of the LeftPanel (open/closed) during the first render.
+  - Everything described in the TODOs within the project.
 
-## Функциональные требования:
-
-1. **Информация о работе**:
-   - Вывод списка компаний, должностей, периодов работы.
-   - Показ достижений, должностных обязанностей и описания проектов.
-   - Детализация использованных технологий.
-
-2. **Раздел "Обо мне"**:
-   - Представление личной информации и профессиональных интересов.
-
-3. **Портфолио**:
-   - Показ проектов с возможностью детального просмотра каждого из них.
-
-4. **Контактная информация**:
-   - Ссылки на социальные сети и профессиональные платформы.
-   - Номера телефонов с указанием страны.
-   - Адрес электронной почты.
-
-5. **Уровни знания языков**:
-   - Вывод информации о владении языками с указанием уровня владения.
-
-6. **Переключение тем**:
-   - Возможность выбора между светлой и тёмной темами интерфейса.
-
-7. **Мультиязычность**:
-   - Поддержка русского и английского языков.
-
-8. **Отображение персональных данных**:
-   - ФИО, желаемая позиция, краткое описание.
-   - Автоматический расчёт стажа работы.
-
-9. **Экспорт CV в PDF**:
-   - Возможность сохранения резюме в PDF-формате.
-
-## Нефункциональные требования
-
-1. **Производительность**:
-   - Высокая скорость загрузки и отзывчивость приложения.
-
-2. **Удобство использования**:
-   - Интуитивно понятный интерфейс, доступный для пользователей всех уровней.
-
-3. **Адаптивность**:
-   - Корректное отображение на различных устройствах и разрешениях экрана.
-
-4. **Совместимость**:
-   - Поддержка всех современных браузеров.
-
-6. **Масштабируемость**:
-   - Лёгкое добавление контента и функциональности.
-
-## Технологии
-
-- React.js
-- Next.js
-- SASS
-- i18next (для интернационализации)
-- Node.js (для серверных функций)
-
-## Архитектура
-
-![architecture](architecture.svg)
-
-## Модель данных
-
-Модель данных описана в файле [```src/types/data.model.ts```](./src/types/data.model.ts)
-
-## Дизайн
-
-Референсы дизайна представлены по [ссылке](https://www.figma.com/file/kY2MLfxX0K0WqTLJQ5iInD/CV-Petrov?type=design&node-id=5-431&mode=design&t=i5vBH6dY8X4iNS63-0)
-
-Каждый элемент и группа именуются по следующему принципу:
-| Принцип    | Пример                | Описание                             |
-|-----------------|-----------------------|--------------------------------------|
-| Начинается с "_"  | ```_layout``` | Не относится к дальнейшей вёрстке и используется только в figma |
-| Начинается с большой буквы | ```Header``` | Элемент или группа является стилизованым HTML-элементом            |
-| Начинается с большой буквы и имеет "дженерик"  | ```Section<experience>``` | Элемент или группа является переиспользуемым компонентом. "Дженерик" указывает на назначение экземпляра компонента |
-| Начинается с маленькой буквы | ```title``` | является пропсом |
-
-Используемые ```брэйкпоинты``` описаны в файле [```src/styles/_breakpoints.scss```](./src/styles/_breakpoints.scss)
-
-# [EN] Personal CV Website
-
+## The version currently in industrial operation is available at the link [bestcv.pro](https://bestcv.pro)
 ## Project Description (Goals)
 
 This project is an interactive web application created using React and Next.js, designed to showcase my professional resume. The website includes detailed information about me, my work experience, project portfolio, and contact information. The application supports multilingualism (Russian and English) and offers the ability to switch between light and dark themes.
@@ -149,6 +70,7 @@ This project is an interactive web application created using React and Next.js, 
 - SASS
 - i18next (for internationalization)
 - Node.js (for server functions)
+- BEM metology
 
 ## Architecture
 

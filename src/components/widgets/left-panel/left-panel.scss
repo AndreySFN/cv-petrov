@@ -1,4 +1,4 @@
-// TODO: Под рефакторинг
+// TODO: Pending refactoring
 @import '~styles/colors';
 @import '~styles/breakpoints.scss';
 
@@ -49,7 +49,8 @@
     display: flex;
     justify-content: flex-end;
     padding: 0 1rem 2rem 0;
-
+    height: 5rem;
+    width: 5rem;
     &--closed {
       padding: 0.2rem;
       padding-bottom: 2rem;

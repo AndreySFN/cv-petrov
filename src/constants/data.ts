@@ -7,14 +7,11 @@ import { LANG_LEVEL } from './lang-levels'
 export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   {
     titleProps: {
-      companyName: 'JSC «TOCHKA»',
       startDate: new Date(2023, 8),
       endDate: new Date(2024, 3),
-      position: 'Interface Developer',
-      iconSrc: '/logo/tochka.png'
     },
     projectDescription: 'A landing page generation system for businesses based on textual ' +
-      'descriptions (using AI), a WYSIWYG landing page editor (drag-n-drop), and hosting for generated websites. https://ai.tochka.com/',
+      'descriptions (using AI), a WYSIWYG landing page editor (drag-n-drop), and hosting for generated websites.',
     mainStack: 'React, TypeScript, custom state-manager, internal UI-Kit, styled-components, Storybook.',
     duties: [
       'Development of user interfaces',
@@ -32,11 +29,8 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   },
   {
     titleProps: {
-      companyName: 'LLC «INNOTECH»',
       startDate: new Date(2022, 2),
       endDate: new Date(2023, 7),
-      position: 'Lead Developer',
-      iconSrc: '/logo/innotech.png'
     },
     projectDescription: 'Dataset annotation and artificial neural network training system.',
     mainStack: 'React+Redux, Redux-toolkit, TypeScript, Material UI, emotion, i18n, GraphQL, Storybook.',
@@ -56,11 +50,8 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   },
   {
     titleProps: {
-      companyName: '«Innopolis» University',
       startDate: new Date(2021, 9),
       endDate: new Date(2021, 12),
-      position: 'Instructor of the course',
-      iconSrc: '/logo/innopolis.png'
     },
     projectDescription: 'Frontend development course (React+TypeScript), as well as backend '+
     'on Node.js+express, for those with experience in JavaScript development',
@@ -74,11 +65,8 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   },
   {
     titleProps: {
-      companyName: 'PJSC «Sberbank»',
       startDate: new Date(2019, 12),
       endDate: new Date(2022, 2),
-      position: 'Senior Development Engineer',
-      iconSrc: '/logo/sber.png'
     },
     projectDescription: 'Internal product. Registry maintenance system for mass enrollments '+
     '(salaries, pensions, and other mass enrollments) of the Business Development Support Platform.',
@@ -111,11 +99,6 @@ export const CONTACTS: Array<IIconedRecordProps> = [
     text: 'andreysfn@yandex.ru',
   },
   {
-    iconSrc: '/icons/russia.png',
-    href: 'tel: +79162894638',
-    text: '+7 (916) 289 46-38'
-  },
-  {
     iconSrc: '/icons/armenia.png',
     href: 'tel: +37491619864',
     text: '+374 91 61 98 64'
@@ -127,7 +110,7 @@ export const CONTACTS: Array<IIconedRecordProps> = [
   },
 ]
 
-export const POSITION = 'MIDDLE+/SENIOR FRONTEND'
+export const POSITION = 'MIDDLE+/SENIOR FULLSTACK'
 
 export const LANGUAGES: Array<ILangCardProps> = [
   {

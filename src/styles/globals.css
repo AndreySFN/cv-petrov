@@ -37,7 +37,7 @@ aside, nav, footer, header, section, main {
 	display: block;
 }
 
-/* TODO Убрать чудо ниже */
+/* TODO: Figure out the miracle below*/
 h1, h2, h3, h4, h5, h6, p {
   font-weight: inherit; 
 }

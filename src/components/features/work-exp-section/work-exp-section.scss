@@ -34,7 +34,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
-            & > * { // TODO: сомнительно, но пока окэй
+            & > * { // TODO: Doubtful, but okay for now
                 min-width: 15rem;
                 word-wrap: break-word;
             }

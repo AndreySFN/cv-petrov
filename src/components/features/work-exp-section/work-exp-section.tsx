@@ -3,8 +3,7 @@
 import classNames from 'classnames';
 import { useState } from 'react';
 
-import { CollapseBtn, List, TitledBlock, WorkExpTitle } from '~components/atoms';
-import { IWorkExpProps } from '~components/molecules';
+import { CollapseBtn, IWorkExpProps, List, TitledBlock, WorkExpTitle } from '~components/atoms';
 
 import './work-exp-section.scss';
 

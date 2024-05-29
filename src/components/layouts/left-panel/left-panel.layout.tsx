@@ -24,7 +24,7 @@ export const LeftPanelLayout = ({ children }: IWithChildren) => {
   return (
     <div className="container">
       <LeftPanel isOpened={isOpened} route={route} setIsOpened={setIsOpened} />
-      <DelayedUnmount delay={HALF_SECOND} shouldRender={isOpened}> {/* TODO: Разобраться с гидратацие */}
+      <DelayedUnmount delay={HALF_SECOND} shouldRender={isOpened}>
         <div className={containerOverlayClass} onClick={handleBtnClick} />
       </DelayedUnmount>
       <div className={containerContentClass}>

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import { IconedRecord, PageHeader, TitledBlock } from '~components/atoms';
-import { LangCard, WorkExpCard } from '~components/molecules';
-import { CONTACTS, LANGUAGES, POSITION, WORK_EXPERIENCE } from '~src/constants';
+import { LangCard } from '~components/molecules';
+import { CONTACTS, LANGUAGES, POSITION } from '~src/constants';
 import { IWithChildren } from '~src/types';
 import { getExperiencePeriod } from '~src/utils';
 
@@ -28,13 +28,6 @@ export const Overview: FC = () => (
             <IconedRecord iconSrc="/tech/redux.png" text="Redux.js" bold />
             <IconedRecord iconSrc="/tech/next.png" text="Next.js" bold />
             <IconedRecord iconSrc="/tech/node.png" text="Node.js" bold />
-          </OverviewBlock>
-        </TitledBlock>
-        <TitledBlock title="Work experience:">
-          <OverviewBlock>
-            {WORK_EXPERIENCE.map(({ titleProps }) => (
-              <WorkExpCard key={titleProps.startDate.toString()} {...titleProps} />
-            ))}
           </OverviewBlock>
         </TitledBlock>
         <TitledBlock title="Languages:">
