@@ -3,7 +3,7 @@ import React from 'react';
 
 import { getNextArrItemByCircle } from '~src/utils';
 
-import './switcher.scss';
+import styles from './switcher.module.scss';
 
 export type TSwitcherOptionId = string;
 
@@ -29,10 +29,10 @@ function SwitcherOption<T extends unknown>({
   isShort,
   isDisabled
 }: ISwitcherOptionProps<T>) {
-  const switcherOptionClasses = classNames('switcher__option', {
-    'switcher__option--active': isActive,
-    'switcher__option--short': isShort,
-    'switcher__option--disabled': isDisabled
+  const switcherOptionClasses = classNames(styles['switcher__option'], {
+    [styles['switcher__option--active']]: isActive,
+    [styles['switcher__option--short']]: isShort,
+    [styles['switcher__option--disabled']]: isDisabled
   });
 
   return (
@@ -64,7 +64,7 @@ const ShortSwitcher = <T extends unknown>({
   const nextId = getNextArrItemByCircle(options, activeIndex).id;
 
   return (
-    <div className="switcher switcher--short">
+    <div className={classNames(styles['switcher'], styles['switcher--short'])}>
       <SwitcherOption
         isShort
         icon={icon}
@@ -84,7 +84,7 @@ const FullSwitcher = <T extends unknown>({
   isDisabled
 }: ISwitcherProps<T>) => {
   return (
-    <div className="switcher">
+    <div className={styles['switcher']}>
       {options.map(({ icon, id }) => (
         <SwitcherOption
           key={String(id)}

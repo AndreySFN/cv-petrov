@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { TStateSetter } from '~src/types';
 
-import './collapse-btn.scss';
+import styles from './collapse-btn.module.scss';
 
 export type TCollapseBtnDirection = 'up-down' | 'left-right';
 
@@ -17,10 +17,10 @@ export interface ICollapseBtnProps {
 
 export const CollapseBtn = ({ isOpen, setIsOpen, direction, className }: ICollapseBtnProps) => {
   const buttonClasses = classNames(
-    'collapse-btn__button',
+    styles.collapseBtnButton,
     {
-      'collapse-btn__button--closed': !isOpen,
-      'collapse-btn__button--up-down': direction === 'up-down',
+      [styles.collapseBtnButtonClosed]: !isOpen,
+      [styles.collapseBtnButtonUpDown]: direction === 'up-down',
     },
     className
   );

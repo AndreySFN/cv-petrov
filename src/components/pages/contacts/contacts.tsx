@@ -3,14 +3,14 @@ import { FC } from 'react';
 import { IconedRecord, PageHeader } from '~components/atoms';
 import { CONTACTS } from '~src/constants';
 
-import './contacts.scss';
+import styles from './contacts.module.scss';
 
 export const Contacts: FC = () => {
   return (
     <>
       <PageHeader title="CONTACTS" />
-      <div className="contacts">
-        <div className="contacts__list">
+      <div className={styles.contacts}>
+        <div className={styles.contacts__list}>
           {CONTACTS.map((props) => (
             <IconedRecord key={props.text} {...props} />
           ))}

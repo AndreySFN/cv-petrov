@@ -2,7 +2,7 @@
 
 # Параметры
 SERVER_USER="root"
-SERVER_HOST="185.80.91.6"
+SERVER_HOST="bestcv.pro"
 SERVER_DIR="/root/bestcv/server"
 SCRIPT_DIR="/root/bestcv"
 LOCAL_DIR="."

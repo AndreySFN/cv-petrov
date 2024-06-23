@@ -6,12 +6,12 @@ import { CONTACTS, LANGUAGES, POSITION, WORK_EXPERIENCE } from '~src/constants';
 import { IWithChildren } from '~src/types';
 import { getExperiencePeriod } from '~src/utils';
 
-import './overview.scss';
+import styles from './overview.module.scss';
 
 interface OverviewBlockProps extends IWithChildren {}
 
 const OverviewBlock: FC<OverviewBlockProps> = ({ children }) => (
-  <div className="overview__block">
+  <div className={styles['overview__block']}>
     {children}
   </div>
 );
@@ -19,8 +19,8 @@ const OverviewBlock: FC<OverviewBlockProps> = ({ children }) => (
 export const Overview: FC = () => (
   <>
     <PageHeader title={POSITION} subtitle={getExperiencePeriod()} />
-    <div className="overview">
-      <div className="overview__main">
+    <div className={styles['overview']}>
+      <div className={styles['overview__main']}>
         <TitledBlock title="Main stack:">
           <OverviewBlock>
             <IconedRecord iconSrc="/tech/typescript.png" text="TypeScript" bold />

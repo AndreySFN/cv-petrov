@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
-import './menu-option.scss';
+import styles from './menu-option.module.scss';
 
 export interface IMenuOptionProps {
   title: ReactNode;
@@ -15,10 +15,10 @@ export interface IMenuOptionProps {
 }
 
 export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisabled, onClick }: IMenuOptionProps) => {
-  const menuOptionClasses = classNames('menu-option', {
-    'menu-option--active': isActive,
-    'menu-option--disabled': isDisabled,
-    'menu-option--short': isSmall
+  const menuOptionClasses = classNames(styles['menu-option'], {
+    [styles['menu-option--active']]: isActive,
+    [styles['menu-option--disabled']]: isDisabled,
+    [styles['menu-option--short']]: isSmall
   });
 
   const Title = () => <h2>{!isSmall ? title : smallTitle}</h2>;
@@ -28,7 +28,7 @@ export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisab
       {isDisabled ? (
         <Title />
       ) : (
-        <Link href={href} className='menu-option__link'>
+        <Link href={href} className={styles['menu-option__link']}>
           <Title />
         </Link>
       )}

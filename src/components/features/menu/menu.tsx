@@ -6,7 +6,7 @@ import { ActivePagesDictionary, PageNames, PagesIconSrcDictionary, PageUrlsDicti
 import { TStateSetter } from '~src/types';
 import { optionalCallback } from '~src/utils';
 
-import './menu.scss';
+import styles from './menu.module.scss';
 
 export interface IMenuProps {
   route: string;
@@ -15,8 +15,8 @@ export interface IMenuProps {
 }
 
 export const Menu: React.FC<IMenuProps> = ({ route: page, isSmall, setIsOpened }) => {
-  const menuClasses = classNames('menu', {
-    'menu--short': isSmall,
+  const menuClasses = classNames(styles.menu, {
+    [styles.menuShort]: isSmall,
   });
 
   return (

@@ -5,13 +5,13 @@ import { PageNames, PageUrlsDictionary } from '~src/constants';
 import { getPeriodWithDuration } from '~src/utils';
 
 import '~styles/typography.scss';
-import './work-exp-card.scss';
 import { IWorkExpProps } from '../types';
+import s from './work-exp-card.module.scss';
 
 export const WorkExpCard = ({ companyName, startDate, endDate, position, iconSrc }: IWorkExpProps) => {
   return (
     <Link href={PageUrlsDictionary[PageNames.WORK_EXPERIENCE]}>
-      <div className="work-exp-card">
+      <div className={s.WorkExpCard}>
         <div className="work-exp-card__company">
           <IconedRecord iconSrc={iconSrc} text={companyName} bold />
         </div>
