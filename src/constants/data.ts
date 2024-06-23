@@ -7,9 +7,25 @@ import { LANG_LEVEL } from './lang-levels'
 export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   {
     titleProps: {
+      companyName: 'GC «Urbantech»',
+      startDate: new Date(2024, 5),
+      position: 'Interface Development Engineer',
+      iconSrc: '/logo/urbantech.png'
+    },
+    projectDescription: 'System for Supporting Traffic Cameras in Moscow and Regions',
+    mainStack: 'React, TypeScript, MobX, internal UI-Kit, SCSS, Ant-Design.',
+    duties: [
+      'Development of an interface for internal users',
+      'Collaborative architecture design',
+      'Analysis of the existing implementation',
+      'Conducting refactoring and code review'
+    ],    
+  },
+  {
+    titleProps: {
       companyName: 'JSC «TOCHKA»',
-      startDate: new Date(2023, 8),
-      endDate: new Date(2024, 3),
+      startDate: new Date(2023, 7),
+      endDate: new Date(2024, 2),
       position: 'Interface Developer',
       iconSrc: '/logo/tochka.png'
     },
@@ -33,8 +49,8 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   {
     titleProps: {
       companyName: 'LLC «INNOTECH»',
-      startDate: new Date(2022, 2),
-      endDate: new Date(2023, 7),
+      startDate: new Date(2022, 1),
+      endDate: new Date(2023, 6),
       position: 'Lead Developer',
       iconSrc: '/logo/innotech.png'
     },
@@ -57,8 +73,8 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   {
     titleProps: {
       companyName: '«Innopolis» University',
-      startDate: new Date(2021, 9),
-      endDate: new Date(2021, 12),
+      startDate: new Date(2021, 8),
+      endDate: new Date(2021, 11),
       position: 'Instructor of the course',
       iconSrc: '/logo/innopolis.png'
     },
@@ -75,8 +91,8 @@ export const WORK_EXPERIENCE: Array<IWorkExpSectionProps> = [
   {
     titleProps: {
       companyName: 'PJSC «Sberbank»',
-      startDate: new Date(2019, 12),
-      endDate: new Date(2022, 2),
+      startDate: new Date(2019, 11),
+      endDate: new Date(2022, 1),
       position: 'Senior Development Engineer',
       iconSrc: '/logo/sber.png'
     },
@@ -127,7 +143,7 @@ export const CONTACTS: Array<IIconedRecordProps> = [
   },
 ]
 
-export const POSITION = 'MIDDLE+/SENIOR FRONTEND'
+export const POSITION = 'MIDDLE+/SENIOR FULLCYCLE WEB-ENGINEER'
 
 export const LANGUAGES: Array<ILangCardProps> = [
   {

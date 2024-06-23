@@ -43,10 +43,10 @@ export function getPeriodBetweenDates(startDate: Date, endDate: Date): string {
   return formatTimePeriod(years, months);
 }
 
-export function getPeriodWithDuration(startDate: Date, endDate: Date): string {
-  const periodDescription = getPeriodBetweenDates(startDate, endDate);
+export function getPeriodWithDuration(startDate: Date, endDate?: Date): string {
+  const periodDescription = getPeriodBetweenDates(startDate, endDate || new Date());
   const startFormatted = formatDate(startDate);
-  const endFormatted = formatDate(endDate);
+  const endFormatted = endDate ? formatDate(endDate): 'present';
   return `${startFormatted} - ${endFormatted} (${periodDescription})`;
 }
 // Exporting the function to get the experience period since START_DATE
