@@ -1,5 +1,4 @@
 @import '~styles/colors';
-@import '~styles/typography';
 
 $transition-duration: 0.3s;
 
@@ -8,7 +7,7 @@ $transition-duration: 0.3s;
   height: 4.5rem;
   background-color: $DARK_BLUE;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   padding-left: 1rem;
   transition: background-color $transition-duration ease;
@@ -21,10 +20,10 @@ $transition-duration: 0.3s;
     height: 100%;
     display: flex;
     align-items: center;
+  }
 
-    h2 {
-      color: $WHITE;
-    }
+  &__title {
+    color: $WHITE;
   }
 
   &:not(&--disabled):hover {
@@ -37,7 +36,7 @@ $transition-duration: 0.3s;
     font-weight: bolder;
     width: calc(100% + 3rem);
 
-    h2 {
+    &__title {
       padding-left: 2rem;
     }
   }
@@ -51,7 +50,7 @@ $transition-duration: 0.3s;
   &--short {
     width: calc(100% + 1rem);
 
-    h2 {
+    &__title {
       padding: 0;
     }
 

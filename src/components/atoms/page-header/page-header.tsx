@@ -1,5 +1,4 @@
 import styles from './page-header.module.scss';
-import '~styles/typography.module.scss';
 
 export interface IPageHeaderProps {
   title: string;

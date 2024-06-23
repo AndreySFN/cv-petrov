@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { IconedRecord } from '~components/atoms';
 import { getPeriodWithDuration } from '~src/utils';
 
-import '~styles/typography.module.scss';
 import { IWorkExpProps } from '../types';
 import styles from './work-exp-title.module.scss';
 

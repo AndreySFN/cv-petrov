@@ -1,7 +1,4 @@
 import { ReactNode } from 'react'
-
-import './list.scss'
-
 export interface IListProps {
     items: Array<ReactNode | string>
     isNumbered?: boolean

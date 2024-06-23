@@ -4,7 +4,6 @@ import { IconedRecord } from '~components/atoms';
 import { PageNames, PageUrlsDictionary } from '~src/constants';
 import { getPeriodWithDuration } from '~src/utils';
 
-import '~styles/typography.scss';
 import { IWorkExpProps } from '../types';
 import s from './work-exp-card.module.scss';
 

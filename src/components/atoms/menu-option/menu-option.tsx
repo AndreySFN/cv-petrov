@@ -21,7 +21,7 @@ export const MenuOption = ({ title, isActive, isSmall, smallTitle, href, isDisab
     [styles['menu-option--short']]: isSmall
   });
 
-  const Title = () => <h2>{!isSmall ? title : smallTitle}</h2>;
+  const Title = () => <span className={styles['menu-option__title']}>{!isSmall ? title : smallTitle}</span>;
 
   return (
     <div onClick={() => onClick && onClick()} className={menuOptionClasses}>

@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { IWithChildren } from '~src/types';
 
-import '~styles/globals.css';
+import '~styles/globals.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 

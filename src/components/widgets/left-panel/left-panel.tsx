@@ -12,7 +12,6 @@ import { useMobile } from '~src/hooks';
 import { TStateSetter } from '~src/types';
 import { optionalCallback } from '~src/utils';
 
-import '~styles/typography.module.scss';
 import styles from './left-panel.module.scss';
 
 export interface ILeftPanelProps {

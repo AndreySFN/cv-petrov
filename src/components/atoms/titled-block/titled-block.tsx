@@ -12,7 +12,7 @@ export const TitledBlock: React.FC<ITitledBlockProps> = ({ children, title }) =>
   return (
     <div className={styles.titled_block}>
       <div className={styles.titled_block__title}>
-        <h3>{title}</h3>
+        <span className={styles['titled_block__title-text']}>{title}</span>
       </div>
       <div className={styles.titled_block__content}>
         {children}
