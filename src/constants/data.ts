@@ -143,7 +143,35 @@ export const CONTACTS: Array<IIconedRecordProps> = [
   },
 ]
 
-export const POSITION = 'MIDDLE+/SENIOR FULLCYCLE WEB-ENGINEER'
+export const POSITION: string = 'MIDDLE+/SENIOR FULLCYCLE WEB-ENGINEER'
+
+export const MAIN_STACK: Array<IIconedRecordProps> = [
+  {
+    iconSrc:'/tech/typescript.png', 
+    text:'TypeScript'
+  },
+  {
+    iconSrc:'/tech/react.png', 
+    text:'React.js'
+  },
+  {
+    iconSrc:'/tech/redux.png', 
+    text:'Redux.js'
+  },
+  {
+    iconSrc:'/tech/next.png', 
+    text:'Next.js'
+  },
+  {
+    iconSrc:'/tech/node.png', 
+    text:'Node.js'
+  },
+  {
+    iconSrc:'/tech/debian.png', 
+    text:'Linux (Debian)'
+
+  }
+]
 
 export const LANGUAGES: Array<ILangCardProps> = [
   {

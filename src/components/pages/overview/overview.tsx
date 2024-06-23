@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { IconedRecord, PageHeader, TitledBlock } from '~components/atoms';
 import { LangCard, WorkExpCard } from '~components/molecules';
-import { CONTACTS, LANGUAGES, POSITION, WORK_EXPERIENCE } from '~src/constants';
+import { CONTACTS, LANGUAGES, MAIN_STACK, POSITION, WORK_EXPERIENCE } from '~src/constants';
 import { IWithChildren } from '~src/types';
 import { getExperiencePeriod } from '~src/utils';
 
@@ -23,12 +23,7 @@ export const Overview: FC = () => (
       <div className="overview__main">
         <TitledBlock title="Main stack:">
           <OverviewBlock>
-            <IconedRecord iconSrc="/tech/typescript.png" text="TypeScript" bold />
-            <IconedRecord iconSrc="/tech/react.png" text="React.js" bold />
-            <IconedRecord iconSrc="/tech/redux.png" text="Redux.js" bold />
-            <IconedRecord iconSrc="/tech/next.png" text="Next.js" bold />
-            <IconedRecord iconSrc="/tech/node.png" text="Node.js" bold />
-            <IconedRecord iconSrc="/tech/debian.png" text="Linux (Debian)" bold />
+            {MAIN_STACK.map(({ iconSrc, text }) => <IconedRecord key={text} iconSrc={iconSrc} text={text} bold />)}
           </OverviewBlock>
         </TitledBlock>
         <TitledBlock title="Work experience:">
