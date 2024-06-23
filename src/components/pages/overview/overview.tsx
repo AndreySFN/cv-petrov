@@ -28,6 +28,7 @@ export const Overview: FC = () => (
             <IconedRecord iconSrc="/tech/redux.png" text="Redux.js" bold />
             <IconedRecord iconSrc="/tech/next.png" text="Next.js" bold />
             <IconedRecord iconSrc="/tech/node.png" text="Node.js" bold />
+            <IconedRecord iconSrc="/tech/debian.png" text="Linux (Debian)" bold />
           </OverviewBlock>
         </TitledBlock>
         <TitledBlock title="Work experience:">
