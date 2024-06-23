@@ -10,21 +10,23 @@ import { HALF_SECOND } from '~src/constants';
 import { useMobile } from '~src/hooks';
 import { IWithChildren } from '~src/types';
 
-import './layout.scss';
+import styles from './layout.module.scss';
 
 export const LeftPanelLayout = ({ children }: IWithChildren) => {
   const route = usePathname();
   const [isOpened, setIsOpened] = useState<boolean>(true);
-  const isMobile = useMobile()
+  const isMobile = useMobile();
   const handleBtnClick = () => setIsOpened((prev) => !prev);
   
-  const containerOverlayClass = classNames('container__overlay', { 'container__overlay--hidden': !isOpened || !isMobile });
-  const containerContentClass = classNames('container__content', { 'container__content--frozen': isOpened && isMobile });
+  const containerOverlayClass = 
+  classNames(styles['container__overlay'], { [styles['container__overlay--hidden']]: !isOpened || !isMobile });
+  const containerContentClass = 
+  classNames(styles['container__content'], { [styles['container__content--frozen']]: isOpened && isMobile });
 
   return (
-    <div className="container">
+    <div className={styles['container']}>
       <LeftPanel isOpened={isOpened} route={route} setIsOpened={setIsOpened} />
-      <DelayedUnmount delay={HALF_SECOND} shouldRender={isOpened}> {/* TODO: Разобраться с гидратацие */}
+      <DelayedUnmount delay={HALF_SECOND} shouldRender={isOpened}> {/* TODO: Разобраться с гидратацией */}
         <div className={containerOverlayClass} onClick={handleBtnClick} />
       </DelayedUnmount>
       <div className={containerContentClass}>

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { CollapseBtn, List, TitledBlock, WorkExpTitle } from '~components/atoms';
 import { IWorkExpProps } from '~components/molecules';
 
-import './work-exp-section.scss';
+import styles from './work-exp-section.module.scss';
 
 export interface IWorkExpSectionProps {
     titleProps: IWorkExpProps;
@@ -19,16 +19,16 @@ export interface IWorkExpSectionProps {
 export const WorkExpSection = ({ titleProps, projectDescription, achievements, duties, mainStack }: IWorkExpSectionProps) => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   
-  const contentClass = classNames('work-exp-section__content', { 'work-exp-section__content--closed': !isOpened });
+  const contentClass = classNames(styles['work-exp-section__content'], { [styles['work-exp-section__content--closed']]: !isOpened });
 
   return (
-    <div className='work-exp-section'>
-      <div className='work-exp-section__header'>
-        <div className='work-exp-section__header__title'>
+    <div className={styles['work-exp-section']}>
+      <div className={styles['work-exp-section__header']}>
+        <div className={styles['work-exp-section__header__title']}>
           <WorkExpTitle {...titleProps} />
         </div>
         <div>
-          <CollapseBtn direction='up-down' className='work-exp-section__collapse-btn' isOpen={isOpened} setIsOpen={setIsOpened} />
+          <CollapseBtn direction='up-down' className={styles['work-exp-section__collapse-btn']} isOpen={isOpened} setIsOpen={setIsOpened} />
         </div>
       </div>
       <div className={contentClass}>
@@ -42,7 +42,7 @@ export const WorkExpSection = ({ titleProps, projectDescription, achievements, d
             {mainStack}
           </TitledBlock>
         )}
-        <div className='work-exp-section__content__duties-and-achievements'>
+        <div className={styles['work-exp-section__content__duties-and-achievements']}>
           {duties && (
             <TitledBlock title='Duties:'>
               <List items={duties} />

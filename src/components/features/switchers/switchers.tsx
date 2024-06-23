@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Switcher } from '~components/atoms';
 import { Languages, languageSwitcherOptions, Themes, themeSwitcherOptions } from '~src/constants';
 
-import './switchers.scss';
+import styles from './switchers.module.scss';
 
 export interface ISwitchersProps {
     closed?: boolean;
@@ -17,7 +17,7 @@ export const Switchers = ({ closed = false, className = '' }: ISwitchersProps) =
   const [language, setLanguage] = useState<Languages>(Languages.EN);
   const [theme, setTheme] = useState<Themes>(Themes.LIGHT);
   
-  const switchersClass = classNames('switchers', { 'switchers__closed': closed }, className);
+  const switchersClass = classNames(styles.switchers, { [styles.switchers__closed]: closed }, className);
 
   return (
     <div className={switchersClass}>
